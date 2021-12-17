@@ -130,3 +130,7 @@ The following installs Data Processing Tools on your machine.
         conda install -c conda-forge gdal=2.4.4 rasterio pyproj pyqt
         pip install -r requirements.txt
 
+## Graphical User Interface (GUI)
+
+## Updating Data Processing Tools
+There can be new features that require new dependencies. In this case, the software needs to be updated and reinstalled. Follow these steps to update and reinstall DPT. Refer to the Software Systems team for new features.
