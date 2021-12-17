@@ -1,0 +1,13 @@
+site_name: GRASPED Software Systems
+theme:
+  name: null
+  custom_dir: 'cinder'
+nav:
+  - Home: index.md
+  - User Guides:
+    - Operations Software: user/operations_software.md
+    - Image Browser: user/image_browser.md
+    - Diwata Browser for QGIS: user/diwata_browser_qgis
+  - Technical Guides:
+    - Operations Software: technical/operations_software.md
+    - Image Browser: technical/image_browser.md
