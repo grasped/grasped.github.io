@@ -6,8 +6,10 @@ nav:
   - Home: index.md
   - User Guides:
     - Operations Software: user/operations_software
-    - Image Browser: user/image_browser
     - Diwata Browser for QGIS: user/diwata_browser_qgis
+    - Diwata Browser for QGIS: user/data_processing_tools
   - Technical Guides:
     - Operations Software: technical/operations_software
     - Image Browser: technical/image_browser
+markdown_extensions:
+  - tables
