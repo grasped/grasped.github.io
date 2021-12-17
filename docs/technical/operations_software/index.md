@@ -1,18 +1,20 @@
-# I. Development
+# Operations Software Technical Guide
+
+## I. Development
 
 A development environment for the Data Manager API can be setup using Vagrant.
 
-## Dependencies
+### Dependencies
 
-### 1. Virtualbox
+#### 1. Virtualbox
 
 Install the Virtualbox release from https://www.virtualbox.org/wiki/Downloads.
 
-### 2. Vagrant
+#### 2. Vagrant
 
 Download and install Vagrant: https://www.vagrantup.com/downloads.html
 
-### 3. Install vagrant plugins
+#### 3. Install vagrant plugins
 ```
 vagrant plugin install vagrant-vbguest
 vagrant vbguest
@@ -20,7 +22,7 @@ vagrant vbguest
 vagrant plugin install vagrant-disksize
 ```
 
-### 3. (Optional) Vagrant-proxyconf
+#### 4. (Optional) Vagrant-proxyconf
 
 `vagrant-proxyconf` is a plugin for vagrant for setting up HTTP and HTTPS proxy configuration.
 
@@ -28,7 +30,7 @@ vagrant plugin install vagrant-disksize
 vagrant plugin install vagrant-proxyconf
 ```
 
-## Provision VM
+### Provision VM
 
 To build a VM for development, run vagrant:
 
@@ -68,15 +70,15 @@ Reload virtual machine:
 vagrant reload
 ```
 
-## Running within Vagrant
+### Running within Vagrant
 
-### 1. Activate the local environment
+#### 1. Activate the local environment
 
 ```
 source venvs/operations-software/bin/activate
 ```
 
-### 2. Run tests
+#### 2. Run tests
 ```
 python manage.py test
 ```
@@ -87,12 +89,12 @@ python manage.py test apps.data_management.tests.test_captures.CaptureTests
 python manage.py test apps.missions_management.tests.test_missions.TestMissionsAPI
 ```
 
-### 3. Run server
+#### 3. Run server
 ```
 python manage.py runserver 0.0.0.0:8000
 ```
 
-## Running within Vagrant behind Nginx
+### Running within Vagrant behind Nginx
 To address connection issues due to CSRF, django can be run behind Nginx. To do this, run:
 ```
 ./uwsgi-vagrant.sh
@@ -101,11 +103,11 @@ To address connection issues due to CSRF, django can be run behind Nginx. To do 
 The app will then be available through http://localhost:8001.
 
 
-# II. Deployment
+## II. Deployment
 
 The Data Manager API is deployed using Ansible. Configurations for deployment is located under `/vagrant/inventory`.
 
-## SSHConfig
+### SSHConfig
 
 ```
 Host phl-microsat-bastion
@@ -126,7 +128,7 @@ Host dm-prod
     ProxyCommand ssh -xaqW%h:22 phl-microsat-bastion
 ```
 
-## Install Python on Deployment Machine
+### Install Python on Deployment Machine
 
 Python is required by Ansible.
 
@@ -134,7 +136,7 @@ Python is required by Ansible.
 sudo apt install python-minimal
 ```
 
-## Create a User
+### Create a User
 
 Before running any setup command, we must first create a user for our application.
 
@@ -152,18 +154,18 @@ NOTE: Copy the key returned by the task. `"ssh-rsa ...`". Add this as a deploy k
 
 This will enable our ansible script to pull the source from our private repository.
 
-## Run Provisioning Scripts
+### Run Provisioning Scripts
 
 ```
 cd vagrant
 ansible-playbook playbooks/provision.yml -i inventories/<host>
 ```
 
-# III. API
+## III. API
 
-## Missions Management
+### Missions Management
 
-### 1. Acquisition Missions
+#### 1. Acquisition Missions
 
 `https://api.ops.phl-microsat.upd.edu.ph/missions_management/missions<parameter/s>`
 
@@ -180,7 +182,7 @@ ansible-playbook playbooks/provision.yml -i inventories/<host>
 | *Mixins* | Mix different filters by using **&** to succeeding parameters | `?satellite=Diwata-1&status=Pending&pointing_mode=Target Pointing` |
 | search | Display data with related keyword | `search=keyword` |
 
-### 2. Download Missions
+#### 2. Download Missions
 
 `https://api.ops.phl-microsat.upd.edu.ph/missions_management/download_missions<parameter/s>`
 
@@ -204,7 +206,7 @@ ansible-playbook playbooks/provision.yml -i inventories/<host>
 | *Mixins* | Mix different filters by using **&** to succeeding parameters | `?satellite=Diwata-1&status=Pending&receiving_station=ASTI` |
 | search | Display data with related keyword | `search=keyword` |
 
-### 3. Upload Missions
+#### 3. Upload Missions
 
 `https://api.ops.phl-microsat.upd.edu.ph/missions_management/upload_missions<parameter/s>`
 
@@ -219,7 +221,7 @@ ansible-playbook playbooks/provision.yml -i inventories/<host>
 | *Mixins* | Mix different filters by using **&** to succeeding parameters | `?satellite=Diwata-1&status=Pending&receiving_station=ASTI` |
 | search | Display data with related keyword | `search=keyword` |
 
-### 4. ACU Log Download Missions
+#### 4. ACU Log Download Missions
 
 `https://api.ops.phl-microsat.upd.edu.ph/missions_management/acu_log_download_missions<parameter/s>`
 
@@ -237,7 +239,7 @@ ansible-playbook playbooks/provision.yml -i inventories/<host>
 | *Mixins* | Mix different filters by using **&** to succeeding parameters | `?satellite=Diwata-1&status=Pending&receiving_station=ASTI` |
 | search | Display data with related keyword | `search=keyword` |
 
-### 5. Targets
+#### 5. Targets
 
 `https://api.ops.phl-microsat.upd.edu.ph/missions_management/targets<parameter/s>`
 
@@ -250,7 +252,7 @@ ansible-playbook playbooks/provision.yml -i inventories/<host>
 | purpose | Filter targets by purpose | `?purpose=Agriculture` |
 | search | Display data with related keyword | `search=keyword` |
 
-### 6. SHU Address Tracker
+#### 6. SHU Address Tracker
 
 `https://api.ops.phl-microsat.upd.edu.ph/missions_management/shu_tracker<parameter/s>`
 
@@ -261,7 +263,7 @@ ansible-playbook playbooks/provision.yml -i inventories/<host>
 | band | Get SHU Addresses by band | `?band=HPT-G` |
 | *Mixins* | Mix different filters by using **&** to succeeding parameters | `?satellite=Diwata-1&payload=SMI` |
 
-### 7. Command Batches
+#### 7. Command Batches
 
 `https://api.ops.phl-microsat.upd.edu.ph/missions_management/command_batches<parameter/s>`
 
@@ -277,7 +279,7 @@ ansible-playbook playbooks/provision.yml -i inventories/<host>
 | description | Search command batches that contain description | `description=sample` |
 | search | Display data with related keyword | `search=keyword` |
 
-### 8. ACU Log Segments
+#### 8. ACU Log Segments
 
 `https://api.ops.phl-microsat.upd.edu.ph/missions_management/acu_log_segments<parameter/s>`
 
@@ -288,7 +290,7 @@ ansible-playbook playbooks/provision.yml -i inventories/<host>
 | max_number_of_sets | Get ACU Log Segment by max number of sets | `?max_number_of_sets=192` |
 | starting_address | Get ACU Log Segment by starting address | `?starting_address=66C000` |
 
-### 9. Mission Types
+#### 9. Mission Types
 
 `https://api.ops.phl-microsat.upd.edu.ph/missions_management/mission_types<parameter/s>`
 
@@ -297,7 +299,7 @@ ansible-playbook playbooks/provision.yml -i inventories/<host>
 | id | Get Mission Type by id | `?id=1` |
 | name | Get Mission Type by name | `?name=Routine ops` |
 
-### 10. Command Types
+#### 10. Command Types
 
 `https://api.ops.phl-microsat.upd.edu.ph/missions_management/command_types<parameter/s>`
 
@@ -308,9 +310,9 @@ ansible-playbook playbooks/provision.yml -i inventories/<host>
 | full_name | Get Command Type by full_name (satellite - name) | `?full_name=Diwata-1 - Acquisition` |
 | satellite | Get Command Type by satellite | `?satellite=Diwata-2` |
 
-### 11. Stats
+#### 11. Stats
 
-#### a. Mission Status Stats
+##### a. Mission Status Stats
 
 `https://api.ops.phl-microsat.upd.edu.ph/missions_management/mission_status_stats<parameter/s>`
 
@@ -319,7 +321,7 @@ ansible-playbook playbooks/provision.yml -i inventories/<host>
 | satellite | Mission status stats for the specified satellite. Default is "ALL" which returns the total stats for all satellites | `?satellite=Diwata-1` |
 | created_time | Display missions status stats in date range depending on created_time | `?from:created_time=2019-01-01&to:created_time=2020-01-09` |
 
-#### b. Upload Failure Stats
+##### b. Upload Failure Stats
 
 `https://api.ops.phl-microsat.upd.edu.ph/missions_management/upload_failure_stats<parameter/s>`
 
@@ -328,7 +330,7 @@ ansible-playbook playbooks/provision.yml -i inventories/<host>
 | satellite | Upload failure stats for the specified satellite. Default is "ALL" which returns the total stats for all satellites | `?satellite=Diwata-1` |
 | upload_time | Display upload failure stats in date range depending on upload_time | `?from:upload_time=2019-01-01&to:upload_time=2020-01-09` |
 
-#### c. Mission Type Stats
+##### c. Mission Type Stats
 
 `https://api.ops.phl-microsat.upd.edu.ph/missions_management/mission_type_stats<parameter/s>`
 
@@ -338,7 +340,7 @@ ansible-playbook playbooks/provision.yml -i inventories/<host>
 | created_time | Display mission type stats in date range depending on created_time | `?from:created_time=2019-01-01&to:created_time=2020-01-09` |
 
 
-### 11. Commands
+#### 11. Commands
 
 `https://api.ops.phl-microsat.upd.edu.ph/missions_management/commands<parameter/s>`
 
@@ -365,8 +367,8 @@ Example POST/PATCH body:
 ```
 
 
-## Data Management Module
-### 1. Captures
+### Data Management Module
+#### 1. Captures
 
 **GET**
 `https://api.ops.phl-microsat.upd.edu.ph/data_management/captures<parameter/s>`
@@ -398,7 +400,7 @@ Sample Body:
 }
 ```
 
-### 2. Missions Coverage Map
+#### 2. Missions Coverage Map
 
 `https://api.ops.phl-microsat.upd.edu.ph/data_management/missions_coverage<parameter/s>`
 
@@ -417,7 +419,7 @@ Sample Body:
 | *Mixins* | Mix different filters by using **&** to succeeding parameters | `?satellite=Diwata-1&payload=SMI,ERC` |
 
 
-### 3. Image Tags
+#### 3. Image Tags
 
 `https://api.ops.phl-microsat.upd.edu.ph/data_management/image_tags<parameter/s>`
 
@@ -431,7 +433,7 @@ Sample Body:
 | search | Display data with related keyword | `search=keyword` |
 
 
-### 4. Capture Image Tags
+#### 4. Capture Image Tags
 **GET** 
 ```
 https://api.ops.phl-microsat.upd.edu.ph/data_management/captures/<capture_id>/image_tags/
@@ -450,7 +452,7 @@ https://api.ops.phl-microsat.upd.edu.ph/data_management/captures/<capture_id>/im
 ```
 
 
-### 5. GCP Files / GCP Json
+#### 5. GCP Files / GCP Json
 
 `https://api.ops.phl-microsat.upd.edu.ph/data_management/gcp_files<parameter/s>`
 
@@ -490,7 +492,7 @@ https://api.ops.phl-microsat.upd.edu.ph/data_management/captures/<capture_id>/im
 | capture_id | The capture_id for the associated gcp points. Required when uploading json string. | Yes |
 
 
-### 6. Telemetry Files
+#### 6. Telemetry Files
 
 **GET**
 
@@ -557,7 +559,7 @@ Sample Patch Body:
 ```
 
 
-### 7. Raw Images
+#### 7. Raw Images
 
 **GET**
 
@@ -651,7 +653,7 @@ Sample Patch Body:
 ```
 
 
-### 8. Merged Raw Images
+#### 8. Merged Raw Images
 
 **GET**
 
@@ -850,7 +852,7 @@ Sample Patch Body:
 }
 ```
 
-### 9. Capture Groups
+#### 9. Capture Groups
 **GET**
 
 `https://api.ops.phl-microsat.upd.edu.ph/data_management/capture_groups<parameter/s>
@@ -940,7 +942,7 @@ Sample POST body:
 Same as POST except capture_group_id
 
 
-### 10. Capture Group Products
+#### 10. Capture Group Products
 **GET**
 
 `https://api.ops.phl-microsat.upd.edu.ph/data_management/capture_group_products<parameter/s>
@@ -1006,8 +1008,8 @@ Sample post body:
 Same to POST except capture_group_product_id
 
 
-## Satellite Health Management
-### 1. Raw Log File Types
+### Satellite Health Management
+#### 1. Raw Log File Types
 
 **GET**
 
@@ -1023,7 +1025,7 @@ Same to POST except capture_group_product_id
 | *Mixins* | Mix different filters by using **&** to succeeding parameters | `?name=RG3&description=.rg3` |
 
 
-### 2. Csv File Log Types
+#### 2. Csv File Log Types
 
 **GET**
 
@@ -1039,7 +1041,7 @@ Same to POST except capture_group_product_id
 | *Mixins* | Mix different filters by using **&** to succeeding parameters | `?name=G1&description=Group 1` |
 
 
-### 3. Raw Log Files
+#### 3. Raw Log Files
 
 **GET**
 
@@ -1078,7 +1080,7 @@ GET by md5sum
 | md5sum | The md5sum of the raw log file | No. Automatically computed |
 
 
-### 4. CSV Log Files
+#### 4. CSV Log Files
 
 **GET**
 
@@ -1126,7 +1128,7 @@ Get the csv file data in csv/json format:
 **NOTE:** Uploading a csv file will automatically generate logs accordingly. 
 
 
-### 5. Group 1 Logs
+#### 5. Group 1 Logs
 
 **GET**
 
@@ -1146,7 +1148,7 @@ Get the csv file data in csv/json format:
 | *Mixins* | Mix different filters by using **&** to succeeding parameters | `?satellite=Diwata-2&from:epoch_acu_date=2020-01-01` |
 
 
-### 6. Group 2 Logs
+#### 6. Group 2 Logs
 
 **GET**
 
@@ -1167,7 +1169,7 @@ Get the csv file data in csv/json format:
 | *Mixins* | Mix different filters by using **&** to succeeding parameters | `?satellite=Diwata-2&from:epoch_acu_date=2020-01-01` |
 
 
-### 7. Group 3 Logs
+#### 7. Group 3 Logs
 
 **GET**
 
@@ -1186,15 +1188,15 @@ Get the csv file data in csv/json format:
 | epoch_acu_date | Get group 3 logs given date range of epoch acu date | `?from:epoch_acu_date=2020-01-01&to:epoch_acu_date=2020-01-31` |
 | *Mixins* | Mix different filters by using **&** to succeeding parameters | `?satellite=Diwata-2&from:epoch_acu_date=2020-01-01` |
 
-### 8. Stats
+#### 8. Stats
 
-#### a. Satellite Temp Min Max
+##### a. Satellite Temp Min Max
 
 **GET**
 
 `https://api.ops.phl-microsat.upd.edu.ph/satellite_health_management/satellite_temp_min_max`
 
-#### b. Satellite Power Data
+##### b. Satellite Power Data
 
 **GET**
 
@@ -1213,7 +1215,7 @@ Returns satellite power data and other parameters based on depacketed metadata o
 | *Mixins* | Mix different filters by using **&** to succeeding parameters | `?satellite=Diwata-2&ordering=date_depacketed` |
 
 
-#### c. Satellite GPS Data
+##### c. Satellite GPS Data
 
 `https://api.ops.phl-microsat.upd.edu.ph/satellite_health_management/satellite_gps_data<parameter/s>`
 
@@ -1228,8 +1230,8 @@ Returns satellite GPS position, velocity data over time. Based on group 3 logs.
 | *Mixins* | Mix different filters by using **&** to succeeding parameters | `?satellite=Diwata-2&ordering=-id` |
 
 
-## Core Module
-### 1. Satellites
+### Core Module
+#### 1. Satellites
 
 `https://api.ops.phl-microsat.upd.edu.ph/core/satellites<parameter/s>`
 
