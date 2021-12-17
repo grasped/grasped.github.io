@@ -134,3 +134,8 @@ The following installs Data Processing Tools on your machine.
 
 ## Updating Data Processing Tools
 There can be new features that require new dependencies. In this case, the software needs to be updated and reinstalled. Follow these steps to update and reinstall DPT. Refer to the Software Systems team for new features.
+
+
+## Links
+- [Data Processing Tools on Gitlab](https://gitlab.com/grasped/data-processing-tools/)
+- [Original Data Processing Tools - User Manual](https://docs.google.com/document/d/1pdwh1z4jj-V-b0lxuiCSdD74bkrm_1qysvXjbTld4Hc/edit#_)

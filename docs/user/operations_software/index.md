@@ -34,3 +34,7 @@ Attitude Control Unit (ACU) log files contain information recorded onboard the s
 Originally, the contents of the files can be inspected by manually running a depacketer software. This process was tedious and only provided information on-demand.
 
 ## Admin Management
+
+## Links
+- [Operations Software](https://ops.stamina4space.upd.edu.ph/)
+- [Operations Software on Gitlab](https://gitlab.com/grasped/operations-software/)
