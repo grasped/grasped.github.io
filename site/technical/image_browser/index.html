@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
     
-    <title>Operations Software User Guide - GRASPED Software Systems</title>
+    <title>Diwata Image Browser Technical Guide - GRASPED Software Systems</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -81,19 +81,19 @@
                         
                             
 <li >
-    <a href="../data_processing_tools">Data Processing Tools</a>
+    <a href="../../user/data_processing_tools">Data Processing Tools</a>
 </li>
 
                         
                             
 <li >
-    <a href="../diwata_browser_qgis">Diwata Browser for QGIS</a>
+    <a href="../../user/diwata_browser_qgis">Diwata Browser for QGIS</a>
 </li>
 
                         
                             
 <li >
-    <a href=".">Operations Software</a>
+    <a href="../../user/operations_software">Operations Software</a>
 </li>
 
                         
@@ -108,13 +108,13 @@
                         
                             
 <li >
-    <a href="../../technical/image_browser">Image Browser</a>
+    <a href=".">Image Browser</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../technical/operations_software">Operations Software</a>
+    <a href="../operations_software">Operations Software</a>
 </li>
 
                         
@@ -140,54 +140,38 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#diwata-operations-software-user-guide">Diwata Operations Software User Guide</a></li>
-            <li class="second-level"><a href="#mission-management">Mission Management</a></li>
+        <li class="first-level active"><a href="#diwata-image-browser-technical-guide">Diwata Image Browser Technical Guide</a></li>
+            <li class="second-level"><a href="#i-development">I. Development</a></li>
                 
-                <li class="third-level"><a href="#acquisition-missions">Acquisition Missions</a></li>
-                <li class="third-level"><a href="#upload-missions">Upload Missions</a></li>
-                <li class="third-level"><a href="#download-missions">Download Missions</a></li>
-                <li class="third-level"><a href="#commands-and-command-batches">Commands and Command Batches</a></li>
-                <li class="third-level"><a href="#reports">Reports</a></li>
-            <li class="second-level"><a href="#data-management">Data Management</a></li>
-                
-            <li class="second-level"><a href="#satellite-health-management">Satellite Health Management</a></li>
-                
-                <li class="third-level"><a href="#acu-logs">ACU Logs</a></li>
-            <li class="second-level"><a href="#admin-management">Admin Management</a></li>
-                
-            <li class="second-level"><a href="#links">Links</a></li>
-                
+                <li class="third-level"><a href="#dependencies">Dependencies</a></li>
+                <li class="third-level"><a href="#cloning-the-project">Cloning the project</a></li>
+                <li class="third-level"><a href="#create-env">Create .env</a></li>
+                <li class="third-level"><a href="#install-the-packages">Install the Packages</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1 id="diwata-operations-software-user-guide">Diwata Operations Software User Guide</h1>
-<p>The Diwata Operations Software (DOS) is an integrated system containing modules for
-managing different components within the satellite operations workflow. The DOS is divided into
-three major modules: Missions Management, Data Management, and Satellite Health
-Management.</p>
-<p>From an architectural standpoint, the DOS serves as a central repository of data for multiple software systems developed in GRASPED.</p>
-<p><img alt="Overview Diagram of GRASPED Operations Software" src="images/operations-software-overview.png" /></p>
-<h2 id="mission-management">Mission Management</h2>
-<p>The Missions Management module was designed to help in mission planning and management of satellite passes. This module includes automated pass prediction features, similar to the Microsatellite Scheduler, as well as a satellite command generator.</p>
-<h3 id="acquisition-missions">Acquisition Missions</h3>
-<h3 id="upload-missions">Upload Missions</h3>
-<h3 id="download-missions">Download Missions</h3>
-<h3 id="commands-and-command-batches">Commands and Command Batches</h3>
-<h3 id="reports">Reports</h3>
-<h2 id="data-management">Data Management</h2>
-<p>The Data Management Module contains tools for storing and accessing images and metadata in different levels of data processing. In this module, users may download images for processing and upload derived products.</p>
-<p>A Data Processing Pipeline is also integrated into the module to automate most of the existing Diwata-1 and Diwata-2 Level 1 product generation.</p>
-<h2 id="satellite-health-management">Satellite Health Management</h2>
-<h3 id="acu-logs">ACU Logs</h3>
-<p>Attitude Control Unit (ACU) log files contain information recorded onboard the satellite describing the state of its positioning and orientation at a given time. The ground station operators download the log files regularly from the satellites and upload them into a cloud service.</p>
-<p>Originally, the contents of the files can be inspected by manually running a depacketer software. This process was tedious and only provided information on-demand.</p>
-<h2 id="admin-management">Admin Management</h2>
-<h2 id="links">Links</h2>
-<ul>
-<li><a href="https://ops.stamina4space.upd.edu.ph/">Operations Software</a></li>
-<li><a href="https://gitlab.com/grasped/operations-software/">Operations Software on Gitlab</a></li>
-</ul></div>
+<h1 id="diwata-image-browser-technical-guide">Diwata Image Browser Technical Guide</h1>
+<h2 id="i-development">I. Development</h2>
+<p>You can develop and run Diwata Image browser in your local machine using Node.js. The system runs on React v17.</p>
+<h3 id="dependencies">Dependencies</h3>
+<p>Install <a href="https://nodejs.org/download/release/v12.19.1/">Node.js v12.19.0</a></p>
+<h3 id="cloning-the-project">Cloning the project</h3>
+<p>Go to <a href="https://gitlab.com/grasped/image-browser-v3">GRASPED Repository - Diwata Image Browser v3</a> and clone the project in your machine.</p>
+<h3 id="create-env">Create .env</h3>
+<p>After cloning the project, proceed to the project files and create a .env file on the root folder.</p>
+<p>Copy and paste this on the .env file.</p>
+<pre><code>PORT=3001
+REACT_APP_API = https://api.data-v3.dev.stamina4space.upd.edu.ph
+REACT_APP_API_USER = b0kuVXen2Syw9tHPWlIwimGND9WOo3VCYlgdTHoT
+REACT_APP_API_PASS = VQeNhwmeyEJ4ww5VRa1GVW2tCk2xtsMF0XveO5TRLjVnYzyRJdT2SvOc42iMwh5b12TdgG4s2u97VPjZ5fjt17WHUHQKDDhLxHs3zQGR0KlQ2g9KHgW9VREQC1gWn43x
+REACT_APP_MAPBOX_TOKEN = pk.eyJ1IjoiZHJhaWxhbjAiLCJhIjoiY2txOTZvMWhhMDE5YTJ1bzFxOHJzNHE5cSJ9.yl38jRSayVcUcrJtYSCnAg
+
+</code></pre>
+<h3 id="install-the-packages">Install the Packages</h3>
+<p>Go to the project, and run</p>
+<pre><code>npm install
+</code></pre></div>
         
         
     </div>

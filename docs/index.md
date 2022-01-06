@@ -14,12 +14,16 @@ Management.
 
 In an architectural standpoint, the DOS serves as a central repository of data for multiple software systems developed in GRASPED.
 
-Check out the [Operations Software User Guide](/user/operations_software) for more info.
+See the [Operations Software User Guide](/user/operations_software) for more info.
 
 ## PR Website
+The GRASPED project maintained two website for public relations and information dissemination: (1) The [PHL-Microsat Website](https://phl-microsat.upd.edu.ph) and, (2) its successor [the STAMINA4Space Website](https://stamina4space.upd.edu.ph). The purpose of both website was to make information about the projects accessible to the public.
+
+The two websites were built on different platforms. See the [PR Website Technical Guide](#) for more information.
+
 
 ## Diwata Browser QGIS Plugin
-The Diwata Browser is a QGIS plugin that enables users to browse and load Diwata microsatellite images. It uses the STAMINA4Space operations-software backend to serve these images. The plugin utilizes the Spatiotemporal Asset Catalog (STAC) specification to describe the images information. The plugin can browse different collections from the operations-software catalog. Furthermore, the plugin can load selected items based on the loaded collection. The software is free to use.
+The Diwata Browser is a QGIS plugin that enables users to browse and load Diwata microsatellite images. It uses the STAMINA4Space operations-software backend to serve these images. The plugin uses the Spatiotemporal Asset Catalog (STAC) specification to describe the images information. The plugin can browse different collections from the operations-software catalog. Furthermore, the plugin can load selected items based on the loaded collection. The software is free to use.
 
 The repository of this software can be found on: https://gitlab.com/cnpante/diwata-browser
 
