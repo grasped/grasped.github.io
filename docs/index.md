@@ -23,9 +23,9 @@ The two websites were built on different platforms. See the [PR Website Technica
 
 
 ## Diwata Browser QGIS Plugin
-The Diwata Browser is a QGIS plugin that enables users to browse and load Diwata microsatellite images. It uses the STAMINA4Space operations-software backend to serve these images. The plugin uses the Spatiotemporal Asset Catalog (STAC) specification to describe the images information. The plugin can browse different collections from the operations-software catalog. Furthermore, the plugin can load selected items based on the loaded collection. The software is free to use.
+The Diwata Browser is a QGIS plugin that enables users to browse and load Diwata microsatellite images. It uses the STAMINA4Space operations-software backend to serve these images. The plugin uses the Spatiotemporal Asset Catalog (STAC) specification to describe the images information. The plugin can browse different collections from the operations-software catalog. The plugin can load selected items based on the loaded collection. The software is free to use.
 
-The repository of this software can be found on: https://gitlab.com/cnpante/diwata-browser
+A repository for this software can be found on [Gitlab](https://gitlab.com/cnpante/diwata-browser).
 
 
 ## Data Processing Tools
