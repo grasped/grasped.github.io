@@ -5,11 +5,12 @@ theme:
 nav:
   - Home: index.md
   - User Guides:
-    - Data Processing Tools: user/data_processing_tools
-    - Diwata Browser for QGIS: user/diwata_browser_qgis
-    - Operations Software: user/operations_software
+      - Data Processing Tools: user/data_processing_tools
+      - Diwata Browser for QGIS: user/diwata_browser_qgis
+      - Operations Software: user/operations_software
+      - PR Site: user/pr_site
   - Technical Guides:
-    - Image Browser: technical/image_browser
-    - Operations Software: technical/operations_software
+      - Image Browser: technical/image_browser
+      - Operations Software: technical/operations_software
 markdown_extensions:
   - tables
