@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
     
-    <title>Data Processing Tools User Guide - GRASPED Software Systems</title>
+    <title>PR Site User Guide - GRASPED Software Systems</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -81,7 +81,7 @@
                         
                             
 <li >
-    <a href=".">Data Processing Tools</a>
+    <a href="../data_processing_tools">Data Processing Tools</a>
 </li>
 
                         
@@ -99,7 +99,7 @@
                         
                             
 <li >
-    <a href="../pr_site">PR Site</a>
+    <a href=".">PR Site</a>
 </li>
 
                         
@@ -146,183 +146,33 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#data-processing-tools-user-guide">Data Processing Tools User Guide</a></li>
-            <li class="second-level"><a href="#installation">Installation</a></li>
-                
-                <li class="third-level"><a href="#requirements">Requirements</a></li>
-                <li class="third-level"><a href="#configuring-rclone">Configuring Rclone</a></li>
-                <li class="third-level"><a href="#data-processing-tools-installation">Data Processing Tools Installation</a></li>
-            <li class="second-level"><a href="#graphical-user-interface-gui">Graphical User Interface (GUI)</a></li>
-                
-            <li class="second-level"><a href="#updating-data-processing-tools">Updating Data Processing Tools</a></li>
-                
+        <li class="first-level active"><a href="#pr-site-user-guide">PR Site User Guide</a></li>
             <li class="second-level"><a href="#links">Links</a></li>
                 
+            <li class="second-level"><a href="#authentication">Authentication</a></li>
+                
+            <li class="second-level"><a href="#creating-article-posts">Creating Article Posts</a></li>
+                
+                <li class="third-level"><a href="#find-posts-in-the-sidemenu-and-click-add-new-button">Find Posts in the sidemenu and click Add New button.</a></li>
+                <li class="third-level"><a href="#start-writing-your-article">Start writing your article</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1 id="data-processing-tools-user-guide">Data Processing Tools User Guide</h1>
-<h2 id="installation">Installation</h2>
-<h3 id="requirements">Requirements</h3>
-<p>The following are required in order to use the Data Processing Tools software.</p>
-<ol>
-<li>
-<p><strong>Git</strong> - Git controls and manages software repositories. Users can download and install Git depending on their operating system. Users can download Git on this link: https://git-scm.com/downloads</p>
-</li>
-<li>
-<p><strong>Gitlab Account</strong> - Gitlab stores and monitors changes in DPT software. A Gitlab account linked to GRASPED group is needed to view the DPT repository. The account must use an SSH key on their machine. Use this instruction to set up SSH key: https://docs.gitlab.com/ee/ssh/.</p>
-</li>
-<li>
-<p><strong>Anaconda</strong> - Anaconda is the distribution of the Python packages required by the DPT software. Use this instruction to install Anaconda dependending on the platform: https://docs.anaconda.com/anaconda/install/windows/</p>
-</li>
-<li>
-<p><strong>Rclone</strong> - Rclone is a command line program to manage files on cloud storage. This program is needed in order to synchronize products to your local machine. Use this instruction to download Rclone: https://rclone.org/downloads/</p>
-</li>
-</ol>
-<h3 id="configuring-rclone">Configuring Rclone</h3>
-<p>To configure Rclone with the S4S Google Drive, follow these steps:</p>
-<ol>
-<li>
-<p>It is recommended to copy the Rclone download to your GRASPED folder.</p>
-<pre><code>(base) C:\User\Documents\GRASPED\rclone-v1.54.0-windows-amd64 &gt;
-</code></pre>
-</li>
-<li>
-<p>From your rclone directory, type in the following:</p>
-<pre><code>&gt; rclone config
-</code></pre>
-</li>
-<li>
-<p>Type in the following to create a new remote.</p>
-<pre><code>e/n/d/r/c/s/q&gt; n
-</code></pre>
-</li>
-<li>
-<p>Type a name for the remote, in this case, it is recommended to name it with:</p>
-<pre><code>name&gt; s4s-drive
-</code></pre>
-</li>
-<li>
-<p>Type in the following to select Google Drive:</p>
-<pre><code>Storage&gt; drive
-</code></pre>
-</li>
-<li>
-<p>Press enter to set default for client_id.</p>
-<pre><code>client_id&gt;
-</code></pre>
-</li>
-<li>
-<p>Press enter to set default for client_secret.</p>
-<pre><code>client_secret&gt;
-</code></pre>
-</li>
-<li>
-<p>Type in the following to set the scope of your access.</p>
-<pre><code>scope&gt; 1
-</code></pre>
-</li>
-<li>
-<p>Press enter to set default for client_secret.</p>
-<pre><code>root_folder_id&gt;
-</code></pre>
-</li>
-<li>
-<p>Press enter to set default for service_account_file.</p>
-<pre><code>service_account_file&gt;
-</code></pre>
-</li>
-<li>
-<p>Type in the following to select say no to editing advanced config:</p>
-<pre><code>y/n&gt; n
-</code></pre>
-</li>
-<li>
-<p>Type in the following to select say yes to use auto config:</p>
-<pre><code>y/n&gt; y
-</code></pre>
-</li>
-<li>
-<p>This will open a browser in which you are asked to login your google account. Choose your S4S google account.</p>
-</li>
-<li>
-<p>If needed, enter your password.</p>
-</li>
-<li>
-<p>Click “Allow” to allow access of rclone to your drive as well as the S4S drive.</p>
-</li>
-<li>
-<p>Return to the Anaconda prompt.</p>
-</li>
-<li>
-<p>Type in the following to say no to set the config as team drive:</p>
-<pre><code>y/n&gt; n
-</code></pre>
-</li>
-<li>
-<p>Press enter or say yes to set the config.</p>
-<pre><code>y/e/d&gt; y
-</code></pre>
-</li>
-<li>
-<p>Finally, enter the following to exit the rclone config.</p>
-<pre><code>e/n/d/r/c/s/q&gt; q
-</code></pre>
-</li>
-<li>
-<p>You must be returned to your rclone directory.</p>
-</li>
-</ol>
-<h3 id="data-processing-tools-installation">Data Processing Tools Installation</h3>
-<p>The following installs Data Processing Tools on your machine.</p>
-<h4 id="on-windows">On Windows</h4>
-<ol>
-<li>Open Anaconda Prompt.</li>
-<li>
-<p>Go to the directory where you want to save the DPT software. Ex.</p>
-<pre><code>(base) C:\User\Documents\GRASPED &gt;
-</code></pre>
-</li>
-<li>
-<p>Run each line of code:
-        cd Documents\GRASPED
-        git clone git@gitlab.com:grasped/data-processing-tools.git
-        cd data-processing-tools
-        conda create -n data-processing-tools -c conda-forge python=3.7 gdal rasterio geopandas fiona opencv cartopy arosics pyqt
-        conda activate data-processing-tools
-        pip install -r requirements.txt --user</p>
-</li>
-</ol>
-<h4 id="on-debian">On Debian</h4>
-<ol>
-<li>Open a terminal.</li>
-<li>
-<p>Go to the directory where you want to save the DPT software. Ex.</p>
-<pre><code>(base) /home/User/Documents/GRASPED $
-</code></pre>
-</li>
-<li>
-<p>Run each line:</p>
-<pre><code>cd Documents/GRASPED
-git clone git@gitlab.com:grasped/data-processing-tools.git
-cd data-processing-tools
-conda create -n data-processing-tools python=3.7
-conda activate data-processing-tools
-conda install -c menpo opencv
-conda install -c conda-forge gdal=2.4.4 rasterio pyproj pyqt
-pip install -r requirements.txt
-</code></pre>
-</li>
-</ol>
-<h2 id="graphical-user-interface-gui">Graphical User Interface (GUI)</h2>
-<h2 id="updating-data-processing-tools">Updating Data Processing Tools</h2>
-<p>There can be new features that require new dependencies. In this case, the software needs to be updated and reinstalled. Follow these steps to update and reinstall DPT. Refer to the Software Systems team for new features.</p>
+<h1 id="pr-site-user-guide">PR Site User Guide</h1>
 <h2 id="links">Links</h2>
-<ul>
-<li><a href="https://gitlab.com/grasped/data-processing-tools/">Data Processing Tools on Gitlab</a></li>
-<li><a href="https://docs.google.com/document/d/1pdwh1z4jj-V-b0lxuiCSdD74bkrm_1qysvXjbTld4Hc/edit#_">Original Data Processing Tools - User Manual</a></li>
-</ul></div>
+<p>URL: <a href="https://stamina4space.upd.edu.ph/">https://stamina4space.upd.edu.ph/</a></p>
+<p>Admin URL: <a href="https://stamina4space.upd.edu.ph/wp-admin">https://stamina4space.upd.edu.ph/wp-admin</a></p>
+<h2 id="authentication">Authentication</h2>
+<pre><code>username: admin
+password: Z9E(WCJMyWFejd2!bqTd0b&amp;x
+</code></pre>
+<h2 id="creating-article-posts">Creating Article Posts</h2>
+<h4 id="find-posts-in-the-sidemenu-and-click-add-new-button">Find <code>Posts</code> in the sidemenu and click <code>Add New</code> button.</h4>
+<p><img alt="Find posts" src="images/post.png" /></p>
+<h4 id="start-writing-your-article">Start writing your article</h4>
+<p><img alt="Create post" src="images/post_create.png" /></p>
+<p>Video Link: <a href="https://www.loom.com/share/c1bc9d3c336a43d8aace13cd6077c5a5">https://www.loom.com/share/c1bc9d3c336a43d8aace13cd6077c5a5</a></p></div>
         
         
     </div>
