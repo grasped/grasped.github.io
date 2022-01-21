@@ -13,7 +13,11 @@ From an architectural standpoint, the DOS serves as a central repository of data
 
 ![Overview Diagram of GRASPED Operations Software](images/operations-software-overview.png)
 
-## Mission Management
+## Accessing the Website
+The Diwata Operations Software may only be accessed by authorized users using this [link](https://ops.stamina4space.upd.edu.ph/).
+![Screenshot of the homepage](images/operations-software-homepage.png)
+
+## Missions Management
 The Missions Management module was designed to help in mission planning and management of satellite passes. This module includes automated pass prediction features, similar to the Microsatellite Scheduler, as well as a satellite command generator.
 
 ### Acquisition Missions
@@ -34,7 +38,15 @@ Attitude Control Unit (ACU) log files contain information recorded onboard the s
 Originally, the contents of the files can be inspected by manually running a depacketer software. This process was tedious and only provided information on-demand.
 
 ## Admin Management
+Alternatively, users can login directly to the operations software backend to have additional access to the database especially when correcting data that are not editable in the Diwata Operations Software. For security purposes, however, not all users who have access to the Diwata Operations Software can login to the admin site. Some users may have limited access as well to protect data integrity. Users can access the site using this [link](https://api.ops.stamina4space.upd.edu.ph/admin/).
+![Screenshot of the homepage](images/operations-software-admin.png)
+
+Upon logging in, the user will see all the accessible modules and data for viewing, adding, editing, and deleting. Access to these data and modules depends on the permissions granted to the user.
+![Screenshot of admin homepage](images/admin-homepage.png)
+![Screenshot of admin homepage-2](images/admin-homepage-2.png)
+![Screenshot of admin homepage-3](images/admin-homepage-3.png)
 
 ## Links
 - [Operations Software](https://ops.stamina4space.upd.edu.ph/)
+- [Operations Software Admin Site](https://api.ops.stamina4space.upd.edu.ph/admin/)
 - [Operations Software on Gitlab](https://gitlab.com/grasped/operations-software/)
