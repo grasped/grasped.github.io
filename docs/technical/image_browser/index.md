@@ -19,11 +19,11 @@ After cloning the project, proceed to the project files and create a .env file o
 Copy and paste this on the .env file.
 
 ```
-PORT=3001
-REACT_APP_API = https://api.data-v3.dev.stamina4space.upd.edu.ph
-REACT_APP_API_USER = b0kuVXen2Syw9tHPWlIwimGND9WOo3VCYlgdTHoT
-REACT_APP_API_PASS = VQeNhwmeyEJ4ww5VRa1GVW2tCk2xtsMF0XveO5TRLjVnYzyRJdT2SvOc42iMwh5b12TdgG4s2u97VPjZ5fjt17WHUHQKDDhLxHs3zQGR0KlQ2g9KHgW9VREQC1gWn43x
-REACT_APP_MAPBOX_TOKEN = pk.eyJ1IjoiZHJhaWxhbjAiLCJhIjoiY2txOTZvMWhhMDE5YTJ1bzFxOHJzNHE5cSJ9.yl38jRSayVcUcrJtYSCnAg
+PORT=
+REACT_APP_API = 
+REACT_APP_API_USER = 
+REACT_APP_API_PASS = 
+REACT_APP_MAPBOX_TOKEN = 
 
 ```
 
