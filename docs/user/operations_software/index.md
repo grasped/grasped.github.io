@@ -21,8 +21,76 @@ The Diwata Operations Software may only be accessed by authorized users using th
 The Missions Management module was designed to help in mission planning and management of satellite passes. This module includes automated pass prediction features, similar to the Microsatellite Scheduler, as well as a satellite command generator.
 
 ### Acquisition Missions
+
+#### Using the Admin Site
+
+##### Adding a new Acquisition Mission
+
+1. Login to the admin site with your credentials. You may contact the system administrator if you still don't have an account.
+
+2. Look for the Missions module under the MISSIONS_MANAGEMENT subgroup.
+![Screenshot of Acquisition Missions](images/acquisition-missions.png)
+
+3. You may click the Missions button to view and update the current records or the Add button if you want to add a new record.
+![Screenshot of Add Acquisition Missions](images/acquisition-missions-2.png)
+
+4. Add the necessary parameters for the mission, and then click Save. You may also choose Save and add another if you wish to save another record, or Save and continue editing if you don't want to view and edit the recorded data.
+![Screenshot of Add Acquisition Missions](images/add-mission-1.png)
+
+Some settings are Diwata-2 specific settings so you need to input necessary parameters for the compiler to work properly.
+
+![Screenshot of Add Acquisition Missions](images/add-mission-2.png)
+
+Unchecking this box will prevent the command compiler from executing.
+![Screenshot of Add Acquisition Missions](images/add-mission-3.png)
+
+Add the payloads to be used.
+![Screenshot of Add Acquisition Missions](images/add-mission-4.png)
+
+**Note:** As of April 5, 2020, generating commands for Diwata-1 will result in TLE errors because Diwata-1 has already been decommissioned. Command Compiler tries to fetch the latest TLE values from the server and will return an error if the TLE's epoch date is older than 7 days.
+
+##### Batch operations for Acquisition Missions
+
+1. Click on the checkbox beside each record to select a record. You may also click the uppermost checkbox to select all the records in the current page.
+![Screenshot of Batch Acquisition Missions](images/acquisition-missions-batch-1.png)
+
+2. Open the dropdown menu above the table and select the action you want to perform. Then, click Go. 
+![Screenshot of Batch Acquisition Missions](images/acquisition-missions-batch-2.png)
+
+A prompt will be shown when trying to delete records. Review and confirm that the data can be deleted before proceeding.
+![Screenshot of Batch Acquisition Missions](images/acquisition-missions-batch-3.png)
+
+**Note:** Please be careful when deleting multiple data. 
+
+
 ### Upload Missions
+
+#### Using the Admin Site
+
+##### Adding a new Acquisition Mission
+
+1. Login to the admin site with your credentials. You may contact the system administrator if you still don't have an account.
+
+2. Look for the Upload missions module under the MISSIONS_MANAGEMENT subgroup.
+![Screenshot of Upload Missions](images/upload-missions.png)
+
+3. You may click the Upload missions button to view and update the current records or the Add button if you want to add a new record.
+![Screenshot of Add Acquisition Missions](images/upload-missions-2.png)
+
+4. Add the necessary parameters for the upload mission, and then click Save. You may also choose Save and add another if you wish to save another record, or Save and continue editing if you don't want to view and edit the recorded data.
+![Screenshot of Add Acquisition Missions](images/upload-missions-3.png)
+
+**Note:** Unchecking Generate commands will prevent the command compiler from executing. This means that the error below will not occur and the record will still be successfully saved but without the generated commands.
+
+**Note:** As of April 5, 2020, generating commands for Diwata-1 will result in TLE errors because Diwata-1 has already been decommissioned. Command Compiler tries to fetch the latest TLE values from the server and will return an error if the TLE's epoch date is older than 7 days.
+
+
 ### Download Missions
+
+**Note:** As of April 5, 2020, generating commands for Diwata-1 will result in TLE errors because Diwata-1 has already been decommissioned. Command Compiler tries to fetch the latest TLE values from the server and will return an error if the TLE's epoch date is older than 7 days.
+
+### ACU Log Download Missions
+
 ### Commands and Command Batches
 ### Reports
 
