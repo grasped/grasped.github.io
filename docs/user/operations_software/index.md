@@ -84,8 +84,61 @@ A prompt will be shown when trying to delete records. Review and confirm that th
 
 **Note:** As of April 5, 2020, generating commands for Diwata-1 will result in TLE errors because Diwata-1 has already been decommissioned. Command Compiler tries to fetch the latest TLE values from the server and will return an error if the TLE's epoch date is older than 7 days.
 
+##### Batch operations for Upload Missions
+
+1. Click on the checkbox beside each record to select a record. You may also click the uppermost checkbox to select all the records in the current page.
+![Screenshot of Batch Upload Missions](images/upload-missions-batch-1.png)
+
+2. Open the dropdown menu above the table and select the action you want to perform. Then, click Go. 
+![Screenshot of Batch Upload Missions](images/upload-missions-batch-2.png)
+
+A prompt will be shown when trying to delete records. Review and confirm that the data can be deleted before proceeding.
+![Screenshot of Batch Upload Missions](images/upload-missions-batch-3.png)
+
+**Note:** Please be careful when deleting multiple data. 
 
 ### Download Missions
+
+#### Using the Admin Site
+
+##### Adding a new Download Mission
+
+1. Login to the admin site with your credentials. You may contact the system administrator if you still don't have an account.
+
+2. Look for the Download Missions module under the MISSIONS_MANAGEMENT subgroup.
+![Screenshot of Download Missions](images/download-missions.png)
+
+3. You may click the Download Missions button to view and update the current records or the Add button if you want to add a new record.
+![Screenshot of Add Download Missions](images/download-missions-2.png)
+
+4. Add the necessary parameters for the mission, and then click Save. You may also choose Save and add another if you wish to save another record, or Save and continue editing if you don't want to view and edit the recorded data.
+![Screenshot of Add Download Missions](images/add-download-mission-1.png)
+
+Some settings are Diwata-2 specific settings so you need to input necessary parameters for the compiler to work properly.
+
+![Screenshot of Add Download Missions](images/add-download-mission-2.png)
+
+Unchecking this box will prevent the command compiler from executing.
+![Screenshot of Add Download Missions](images/add-download-mission-3.png)
+
+Add the bands, starting addresses, and number of images to be downloaded, respectively.
+![Screenshot of Add Download Missions](images/add-download-mission-4.png)
+
+**Note:** As of April 5, 2020, generating commands for Diwata-1 will result in TLE errors because Diwata-1 has already been decommissioned. Command Compiler tries to fetch the latest TLE values from the server and will return an error if the TLE's epoch date is older than 7 days.
+
+##### Batch operations for Download Missions
+
+1. Click on the checkbox beside each record to select a record. You may also click the uppermost checkbox to select all the records in the current page.
+![Screenshot of Batch Download Missions](images/download-missions-batch-1.png)
+
+2. Open the dropdown menu above the table and select the action you want to perform. Then, click Go. 
+![Screenshot of Batch Download Missions](images/download-missions-batch-2.png)
+
+A prompt will be shown when trying to delete records. Review and confirm that the data can be deleted before proceeding.
+![Screenshot of Batch Download Missions](images/download-missions-batch-3.png)
+
+**Note:** Please be careful when deleting multiple data. 
+
 
 **Note:** As of April 5, 2020, generating commands for Diwata-1 will result in TLE errors because Diwata-1 has already been decommissioned. Command Compiler tries to fetch the latest TLE values from the server and will return an error if the TLE's epoch date is older than 7 days.
 
