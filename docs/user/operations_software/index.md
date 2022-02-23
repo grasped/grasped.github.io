@@ -247,6 +247,25 @@ Upon logging in, the user will see all the accessible modules and data for viewi
 ![Screenshot of admin homepage-2](images/admin-homepage-2.png)
 ![Screenshot of admin homepage-3](images/admin-homepage-3.png)
 
+### Adding user accounts
+
+1. Under the **Authentication and Authorization** group, select **Users** or click the **Add** button.
+![Screenshot of the site administration](images/add-users-1.png)
+<br/><br/>Alternatively, you may also click the **Add User** button from the Users list.
+![Screenshot of users list](images/add-users-2.png)
+
+2. Add the desired username and password. **Note:** Avoid using common passwords.
+![Screenshot of add users 1](images/add-users-3.png)
+
+3. Click **Save** button. A message will confirm that the user has been saved and a dialog will open where you can edit user info and permissions.
+![Screenshot of add users 2](images/add-users-4.png)
+
+You may select individual/multiple permissions for each user.
+![Screenshot of add users 3](images/add-users-5.png)
+
+![Screenshot of add users 3](images/add-users-6.png)
+
+
 ## Links
 - [Operations Software](https://ops.stamina4space.upd.edu.ph/)
 - [Operations Software Admin Site](https://api.ops.stamina4space.upd.edu.ph/admin/)
