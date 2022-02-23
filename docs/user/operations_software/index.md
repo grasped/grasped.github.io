@@ -22,7 +22,7 @@ The Missions Management module was designed to help in mission planning and mana
 
 ### Targets
 
-![Overview of Targets Page](images/targets-overview.png)
+![Overview of Targets Page](images/targets-overview.PNG)
 
 <center>Overview of Targets Page</center>
 
@@ -46,7 +46,7 @@ Filter Description
 
 1. Click the `Add Target` button at the upper right side of filters to redirect to Add Target Page.
 
-![Add Target Page](images/add-target-page.png)
+![Add Target Page](images/add-target-page.PNG)
 
 <center>Add Target Page</center>
 
@@ -302,7 +302,7 @@ Alternatively, you may input the ID of the command in the text box provided.
 
 ### Reports
 
-![Overview of Reports Page](images/reports-overview.png)
+![Overview of Reports Page](images/reports-overview.PNG)
 
 <center>Overview of Reports Page</center>
 
@@ -326,7 +326,7 @@ A Data Processing Pipeline is also integrated into the module to automate most o
 
 ### Raw Files
 
-![Overview of Raw Files Page](images/raw-files-overview.png)
+![Overview of Raw Files Page](images/raw-files-overview.PNG)
 
 <center>Overview of Raw Files Page</center>
 
@@ -386,7 +386,7 @@ Option 2: From Drawer
 
 ### Captures
 
-![Overview of Captures Page](images/captures-overview.png)
+![Overview of Captures Page](images/captures-overview.PNG)
 
 <center>Overview of Captures Page</center>
 
@@ -461,7 +461,7 @@ Option 3: From download cart
 
 ### Capture Groups
 
-![Overview of Capture Groups Page](images/capture-groups-overview.png)
+![Overview of Capture Groups Page](images/capture-groups-overview.PNG)
 
 <center>Overview of Capture Groups Page</center>
 
