@@ -147,20 +147,28 @@
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
         <li class="first-level active"><a href="#diwata-operations-software-user-guide">Diwata Operations Software User Guide</a></li>
-            <li class="second-level"><a href="#mission-management">Mission Management</a></li>
+            <li class="second-level"><a href="#accessing-the-website">Accessing the Website</a></li>
                 
+            <li class="second-level"><a href="#missions-management">Missions Management</a></li>
+                
+                <li class="third-level"><a href="#targets">Targets</a></li>
                 <li class="third-level"><a href="#acquisition-missions">Acquisition Missions</a></li>
                 <li class="third-level"><a href="#upload-missions">Upload Missions</a></li>
                 <li class="third-level"><a href="#download-missions">Download Missions</a></li>
+                <li class="third-level"><a href="#acu-log-download-missions">ACU Log Download Missions</a></li>
                 <li class="third-level"><a href="#commands-and-command-batches">Commands and Command Batches</a></li>
                 <li class="third-level"><a href="#reports">Reports</a></li>
             <li class="second-level"><a href="#data-management">Data Management</a></li>
                 
+                <li class="third-level"><a href="#raw-files">Raw Files</a></li>
+                <li class="third-level"><a href="#captures">Captures</a></li>
+                <li class="third-level"><a href="#capture-groups">Capture Groups</a></li>
             <li class="second-level"><a href="#satellite-health-management">Satellite Health Management</a></li>
                 
                 <li class="third-level"><a href="#acu-logs">ACU Logs</a></li>
             <li class="second-level"><a href="#admin-management">Admin Management</a></li>
                 
+                <li class="third-level"><a href="#adding-user-accounts">Adding user accounts</a></li>
             <li class="second-level"><a href="#links">Links</a></li>
                 
     </ul>
@@ -174,24 +182,668 @@ three major modules: Missions Management, Data Management, and Satellite Health
 Management.</p>
 <p>From an architectural standpoint, the DOS serves as a central repository of data for multiple software systems developed in GRASPED.</p>
 <p><img alt="Overview Diagram of GRASPED Operations Software" src="images/operations-software-overview.png" /></p>
-<h2 id="mission-management">Mission Management</h2>
+<h2 id="accessing-the-website">Accessing the Website</h2>
+<p>The Diwata Operations Software may only be accessed by authorized users using this <a href="https://ops.stamina4space.upd.edu.ph/">link</a>.
+<img alt="Screenshot of the homepage" src="images/operations-software-homepage.png" /></p>
+<h2 id="missions-management">Missions Management</h2>
 <p>The Missions Management module was designed to help in mission planning and management of satellite passes. This module includes automated pass prediction features, similar to the Microsatellite Scheduler, as well as a satellite command generator.</p>
+<h3 id="targets">Targets</h3>
+<p><img alt="Overview of Targets Page" src="images/targets-overview.png" /></p>
+<p><center>Overview of Targets Page</center></p>
+<p>Page contents:</p>
+<ol>
+<li>Create new targets</li>
+<li>Filters</li>
+<li>Actions (Delete multiple targets)</li>
+<li>Search bar to find keywords on the table</li>
+<li>View/edit target details</li>
+</ol>
+<p>Filter Description</p>
+<table>
+<thead>
+<tr>
+<th>Filter Label</th>
+<th>Description</th>
+<th>List of Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>Filter by name</td>
+<td>----</td>
+</tr>
+<tr>
+<td>Classification</td>
+<td>Filter by classification</td>
+<td>Integer from 0-5 </br> Default value: All</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>Filter by purpose</td>
+<td>Agriculture, Agriculture Validation, Agroforestry, Aquaculture, Calibration Validation, Coastal Monitoring, Cultural Heritage, Fisheries, Forest Validation, Forestry, Flood and storm surge, Land Use Change, Ocean Validation, Protected Area, Security, Typhoon, Tourism, Urban, Validation Site(urban)  </br> Default value: All</td>
+</tr>
+</tbody>
+</table>
+<h4 id="how-to-create-new-entries">How to create new entries?</h4>
+<ol>
+<li>Click the <code>Add Target</code> button at the upper right side of filters to redirect to Add Target Page.</li>
+</ol>
+<p><img alt="Add Target Page" src="images/add-target-page.png" /></p>
+<p><center>Add Target Page</center></p>
+<p><br />&nbsp;&nbsp;&nbsp;&nbsp; 2. Input name, select target by drawing polygon on the map, tick/untick is active status, select classification and purpose, and input requred bands.
+<br />&nbsp;&nbsp;&nbsp;&nbsp; 3. Name, classification and purpose are required fields.
+<br />&nbsp;&nbsp;&nbsp;&nbsp; 4. After filling out the form, click <code>Submit</code> button.
+<br />&nbsp;&nbsp;&nbsp;&nbsp; 5. New target will be added to the table in Targets Page.</p>
+<h4 id="how-to-view-or-update-details-of-a-mission">How to view or update details of a mission?</h4>
+<ol>
+<li>Click the ID of target to redirect to View Target Page.</li>
+<li>If details are edited, click <code>Submit</code> button to update.</li>
+</ol>
 <h3 id="acquisition-missions">Acquisition Missions</h3>
+<h4 id="using-the-admin-site">Using the Admin Site</h4>
+<h5 id="adding-a-new-acquisition-mission">Adding a new Acquisition Mission</h5>
+<ol>
+<li>
+<p>Login to the admin site with your credentials. You may contact the system administrator if you still don't have an account.</p>
+</li>
+<li>
+<p>Look for the Missions module under the MISSIONS_MANAGEMENT subgroup.
+<img alt="Screenshot of Acquisition Missions" src="images/acquisition-missions.png" /></p>
+</li>
+<li>
+<p>You may click the Missions button to view and update the current records or the Add button if you want to add a new record.
+<img alt="Screenshot of Add Acquisition Missions" src="images/acquisition-missions-2.png" /></p>
+</li>
+<li>
+<p>Add the necessary parameters for the mission, and then click Save. You may also choose Save and add another if you wish to save another record, or Save and continue editing if you don't want to view and edit the recorded data.
+<img alt="Screenshot of Add Acquisition Missions" src="images/add-mission-1.png" /></p>
+</li>
+</ol>
+<p>Some settings are Diwata-2 specific settings so you need to input necessary parameters for the compiler to work properly.</p>
+<p><img alt="Screenshot of Add Acquisition Missions" src="images/add-mission-2.png" /></p>
+<p>Unchecking this box will prevent the command compiler from executing.
+<img alt="Screenshot of Add Acquisition Missions" src="images/add-mission-3.png" /></p>
+<p>Add the payloads to be used.
+<img alt="Screenshot of Add Acquisition Missions" src="images/add-mission-4.png" /></p>
+<p><strong>Note:</strong> As of April 5, 2020, generating commands for Diwata-1 will result in TLE errors because Diwata-1 has already been decommissioned. Command Compiler tries to fetch the latest TLE values from the server and will return an error if the TLE's epoch date is older than 7 days.</p>
+<h5 id="batch-operations-for-acquisition-missions">Batch operations for Acquisition Missions</h5>
+<ol>
+<li>
+<p>Click on the checkbox beside each record to select a record. You may also click the uppermost checkbox to select all the records in the current page.
+<img alt="Screenshot of Batch Acquisition Missions" src="images/acquisition-missions-batch-1.png" /></p>
+</li>
+<li>
+<p>Open the dropdown menu above the table and select the action you want to perform. Then, click Go. 
+<img alt="Screenshot of Batch Acquisition Missions" src="images/acquisition-missions-batch-2.png" /></p>
+</li>
+</ol>
+<p>A prompt will be shown when trying to delete records. Review and confirm that the data can be deleted before proceeding.
+<img alt="Screenshot of Batch Acquisition Missions" src="images/acquisition-missions-batch-3.png" /></p>
+<p><strong>Note:</strong> Please be careful when deleting multiple data. </p>
+<h4 id="how-to-update-status-of-missions">How to update status of missions?</h4>
+<p>Filter Description</p>
+<table>
+<thead>
+<tr>
+<th>Filter Label</th>
+<th>Description</th>
+<th>List of Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Status</td>
+<td>Filter by status</td>
+<td>Pending, Captured, Failed, Cancelled, Downloadable, Processed, Not Processed, Distributed </br> Default value: All</td>
+</tr>
+<tr>
+<td>Pointing Mode</td>
+<td>Filter by pointing mode</td>
+<td>Not Determined, Target Pointing, Off Nadir, Nadir, Rpy, Qt, Off Nadir Rpy, Manual Qt </br> Default value: All</td>
+</tr>
+<tr>
+<td>Satellite</td>
+<td>Filter by satellite</td>
+<td>Diwata-1, Diwata-2, Maya-1 </br> Default value: All</td>
+</tr>
+</tbody>
+</table>
+<h4 id="how-to-create-new-entries_1">How to create new entries?</h4>
+<ol>
+<li>On the acquisition mission page, click the <code>Add Missions</code> button at the upper right side of filters to redirect to Add Acquisition Missions Page.</li>
+<li>Fill out the form.</li>
+<li>On the Mission Cameras part at the end of the form, click the <code>Add Mission Camera</code> button to create a new form for Camera #1. If you need to add more cameras, click the  <code>Add Mission Camera</code> button. If you need to remove a camera, click the <code>Remove</code> button. </li>
+<li>After filling out the form, click <code>Submit</code> button.</li>
+<li>New mission will be added to the table in Acquisition Missions Page.</li>
+</ol>
+<h4 id="how-to-view-or-update-details-of-a-mission_1">How to view or update details of a mission?</h4>
+<ol>
+<li>Click the ID of mission to redirect to View Acquisition Mission Page.</li>
+<li>After editing, click <code>Submit</code> button.</li>
+</ol>
+<h4 id="how-to-update-status-of-missions_1">How to update status of missions?</h4>
+<ol>
+<li>Choose an action from the dropdown list above the table.</li>
+<li>Select mission/s to update by ticking the check box on each row.</li>
+<li>If at least one mission is selected, the <code>Go</code> button beside the action dropdown list will be clickable, and number of selected missions will be shown beside the Go button.</li>
+<li>Click <code>Go</code> button to update selected missions.</li>
+</ol>
 <h3 id="upload-missions">Upload Missions</h3>
+<h4 id="using-the-admin-site_1">Using the Admin Site</h4>
+<h5 id="adding-a-new-acquisition-mission_1">Adding a new Acquisition Mission</h5>
+<ol>
+<li>
+<p>Login to the admin site with your credentials. You may contact the system administrator if you still don't have an account.</p>
+</li>
+<li>
+<p>Look for the Upload missions module under the MISSIONS_MANAGEMENT subgroup.
+<img alt="Screenshot of Upload Missions" src="images/upload-missions.png" /></p>
+</li>
+<li>
+<p>You may click the Upload missions button to view and update the current records or the Add button if you want to add a new record.
+<img alt="Screenshot of Add Acquisition Missions" src="images/upload-missions-2.png" /></p>
+</li>
+<li>
+<p>Add the necessary parameters for the upload mission, and then click Save. You may also choose Save and add another if you wish to save another record, or Save and continue editing if you don't want to view and edit the recorded data.
+<img alt="Screenshot of Add Acquisition Missions" src="images/upload-missions-3.png" /></p>
+</li>
+</ol>
+<p><strong>Note:</strong> Unchecking Generate commands will prevent the command compiler from executing. This means that the error below will not occur and the record will still be successfully saved but without the generated commands.</p>
+<p><strong>Note:</strong> As of April 5, 2020, generating commands for Diwata-1 will result in TLE errors because Diwata-1 has already been decommissioned. Command Compiler tries to fetch the latest TLE values from the server and will return an error if the TLE's epoch date is older than 7 days.</p>
+<h5 id="batch-operations-for-upload-missions">Batch operations for Upload Missions</h5>
+<ol>
+<li>
+<p>Click on the checkbox beside each record to select a record. You may also click the uppermost checkbox to select all the records in the current page.
+<img alt="Screenshot of Batch Upload Missions" src="images/upload-missions-batch-1.png" /></p>
+</li>
+<li>
+<p>Open the dropdown menu above the table and select the action you want to perform. Then, click Go. 
+<img alt="Screenshot of Batch Upload Missions" src="images/upload-missions-batch-2.png" /></p>
+</li>
+</ol>
+<p>A prompt will be shown when trying to delete records. Review and confirm that the data can be deleted before proceeding.
+<img alt="Screenshot of Batch Upload Missions" src="images/upload-missions-batch-3.png" /></p>
+<p><strong>Note:</strong> Please be careful when deleting multiple data. </p>
 <h3 id="download-missions">Download Missions</h3>
+<h4 id="using-the-admin-site_2">Using the Admin Site</h4>
+<h5 id="adding-a-new-download-mission">Adding a new Download Mission</h5>
+<ol>
+<li>
+<p>Login to the admin site with your credentials. You may contact the system administrator if you still don't have an account.</p>
+</li>
+<li>
+<p>Look for the Download Missions module under the MISSIONS_MANAGEMENT subgroup.
+<img alt="Screenshot of Download Missions" src="images/download-missions.png" /></p>
+</li>
+<li>
+<p>You may click the Download Missions button to view and update the current records or the Add button if you want to add a new record.
+<img alt="Screenshot of Add Download Missions" src="images/download-missions-2.png" /></p>
+</li>
+<li>
+<p>Add the necessary parameters for the mission, and then click Save. You may also choose Save and add another if you wish to save another record, or Save and continue editing if you don't want to view and edit the recorded data.
+<img alt="Screenshot of Add Download Missions" src="images/add-download-mission-1.png" /></p>
+</li>
+</ol>
+<p>Some settings are Diwata-2 specific settings so you need to input necessary parameters for the compiler to work properly.</p>
+<p><img alt="Screenshot of Add Download Missions" src="images/add-download-mission-2.png" /></p>
+<p>Unchecking this box will prevent the command compiler from executing.
+<img alt="Screenshot of Add Download Missions" src="images/add-download-mission-3.png" /></p>
+<p>Add the bands, starting addresses, and number of images to be downloaded, respectively.
+<img alt="Screenshot of Add Download Missions" src="images/add-download-mission-4.png" /></p>
+<p><strong>Note:</strong> As of April 5, 2020, generating commands for Diwata-1 will result in TLE errors because Diwata-1 has already been decommissioned. Command Compiler tries to fetch the latest TLE values from the server and will return an error if the TLE's epoch date is older than 7 days.</p>
+<h5 id="batch-operations-for-download-missions">Batch operations for Download Missions</h5>
+<ol>
+<li>
+<p>Click on the checkbox beside each record to select a record. You may also click the uppermost checkbox to select all the records in the current page.
+<img alt="Screenshot of Batch Download Missions" src="images/download-missions-batch-1.png" /></p>
+</li>
+<li>
+<p>Open the dropdown menu above the table and select the action you want to perform. Then, click Go. 
+<img alt="Screenshot of Batch Download Missions" src="images/download-missions-batch-2.png" /></p>
+</li>
+</ol>
+<p>A prompt will be shown when trying to delete records. Review and confirm that the data can be deleted before proceeding.
+<img alt="Screenshot of Batch Download Missions" src="images/download-missions-batch-3.png" /></p>
+<p><strong>Note:</strong> Please be careful when deleting multiple data. </p>
+<p><strong>Note:</strong> As of April 5, 2020, generating commands for Diwata-1 will result in TLE errors because Diwata-1 has already been decommissioned. Command Compiler tries to fetch the latest TLE values from the server and will return an error if the TLE's epoch date is older than 7 days.</p>
+<h3 id="acu-log-download-missions">ACU Log Download Missions</h3>
+<h4 id="using-the-admin-site_3">Using the Admin Site</h4>
+<h5 id="adding-a-new-acu-log-download-mission">Adding a new ACU Log Download Mission</h5>
+<ol>
+<li>
+<p>Login to the admin site with your credentials. You may contact the system administrator if you still don't have an account.</p>
+</li>
+<li>
+<p>Look for the ACU Log Download Missions module under the MISSIONS_MANAGEMENT subgroup.
+<img alt="Screenshot of ACU Log Download Missions" src="images/acu-log-download-missions.png" /></p>
+</li>
+<li>
+<p>You may click the ACU Log Download Missions button to view and update the current records or the Add button if you want to add a new record.
+<img alt="Screenshot of Add ACU Log Download Missions" src="images/acu-log-download-missions-2.png" /></p>
+</li>
+<li>
+<p>Add the necessary parameters for the mission, and then click Save. You may also choose Save and add another if you wish to save another record, or Save and continue editing if you don't want to view and edit the recorded data.
+<img alt="Screenshot of Add ACU Log Download Missions" src="images/add-acu-log-download-mission-1.png" /></p>
+</li>
+</ol>
+<p><img alt="Screenshot of Add ACU Log Download Missions" src="images/add-acu-log-download-mission-2.png" /></p>
+<p>Unchecking this box will prevent the command compiler from executing.
+<img alt="Screenshot of Add Download Missions" src="images/add-acu-log-download-mission-3.png" /></p>
+<h5 id="batch-operations-for-acu-log-download-missions">Batch operations for ACU Log Download Missions</h5>
+<ol>
+<li>
+<p>Click on the checkbox beside each record to select a record. You may also click the uppermost checkbox to select all the records in the current page.
+<img alt="Screenshot of Batch ACU Log Download Missions" src="images/acu-log-download-missions-batch-1.png" /></p>
+</li>
+<li>
+<p>Open the dropdown menu above the table and select the action you want to perform. Then, click Go. 
+<img alt="Screenshot of Batch ACU Log Download Missions" src="images/acu-log-download-missions-batch-2.png" /></p>
+</li>
+</ol>
+<p>A prompt will be shown when trying to delete records. Review and confirm that the data can be deleted before proceeding.
+<img alt="Screenshot of Batch ACU Log Download Missions" src="images/acu-log-download-missions-batch-3.png" /></p>
+<p><strong>Note:</strong> Please be careful when deleting multiple data. </p>
 <h3 id="commands-and-command-batches">Commands and Command Batches</h3>
+<h4 id="using-the-admin-site_4">Using the Admin Site</h4>
+<p>Commands are generated by default whenever missions are created. The list of commands can be found in the Command module of Missions Management module.
+<img alt="Screenshot of Commands" src="images/commands.png" /></p>
+<h5 id="viewing-and-editing-commands">Viewing and Editing commands</h5>
+<ol>
+<li>
+<p>Upon clicking the <strong>Commands</strong> button, you will see all the generated commands from all the different missions (acquisition, download, etc.). Click on the ID to view/edit the content of a command.
+<img alt="Screenshot of all Commands" src="images/commands-2.png" /></p>
+</li>
+<li>
+<p>Edit the content part of the command and click <strong>Save</strong>.
+<img alt="Screenshot of all commands" src="images/commands-3.png" /></p>
+</li>
+</ol>
+<p><strong>Note:</strong> Commands that are created using the Add command module cannot be linked to an existing mission. To be able to link a mission and a command, create a mission and then find the generated command and edit it. Command compiler will execute everytime <strong>any of the three Save</strong> button is pressed. To prevent the command from being replaced, uncheck the <strong>Create commands</strong> button before saving the mission.
+<img alt="Screenshot of Generated commands from an existing acquisition mission" src="images/mission-commands.png" /></p>
+<h5 id="creating-command-batches">Creating command batches</h5>
+<p>Command batches are a group of commands. It may be a combination of upload, download, acu log download, and acquisition missions. </p>
+<ol>
+<li>To create a batch, go to the <strong>command batches</strong> module or click the <strong>Add</strong> button.</li>
+</ol>
+<p><img alt="Screenshot of Command Batches 1" src="images/command-batches-1.png" /></p>
+<p>If you're already on the list of command batches, you may click the <strong>Add Command batch</strong> on the top right corner of the site.
+<img alt="Screenshot of Command Batches 2" src="images/command-batches-2.png" /></p>
+<ol>
+<li>Add the necessary parameters needed.
+<img alt="Screenshot of Add command batch 1" src="images/add-command-batch-1.png" /></li>
+</ol>
+<p>This part will reflect the generated batch after saving the command batch.
+<img alt="Screenshot of Add command batch 1" src="images/add-command-batch-2.png" /></p>
+<p>Supply the ID of the command that will be added to the batch. To select from the list of commands, you may click the search icon beside the text box.</p>
+<p><img alt="Screenshot of Add command batch 1" src="images/add-command-batch-3.png" /></p>
+<p>A window with the list of commands will popup. Selecting the ID will supply the text box with the command.</p>
+<p><img alt="Screenshot of Add command batch 1" src="images/add-command-batch-4.png" /></p>
+<p>Alternatively, you may input the ID of the command in the text box provided.</p>
 <h3 id="reports">Reports</h3>
+<p><img alt="Overview of Reports Page" src="images/reports-overview.png" /></p>
+<p><center>Overview of Reports Page</center></p>
+<p>Page contents:</p>
+<ol>
+<li>Date Filter</li>
+<li>Satellite Filter</li>
+<li>Payload Filter</li>
+</ol>
+<h4 id="how-to-apply-filters">How to apply filters?</h4>
+<ol>
+<li>On the upper left side, select a satellite to filter data shown on graphs and table. Once satellite filter is changed, graphs and table will reload and new data will be fetched based on the selected satellite. Default value of satellite filter is Diwata-1.</li>
+<li>On the upper right side is the date range filter. To apply this filter, select two dates from the date range selector. To cancel this filter,  click the <code>All</code> button. As default, data shown on graphs and table shows <code>All</code> or no date range is initially set.</li>
+<li>From the PERCENTAGE COVERED IN THE PHILIPPINES, data shown on the map can be filtered by payload. Initially, data captured by SMI, HPT and ERC are included. Toggle the payload to exclude it on map.</li>
+<li>Refresh page to reset all filters.</li>
+</ol>
 <h2 id="data-management">Data Management</h2>
 <p>The Data Management Module contains tools for storing and accessing images and metadata in different levels of data processing. In this module, users may download images for processing and upload derived products.</p>
 <p>A Data Processing Pipeline is also integrated into the module to automate most of the existing Diwata-1 and Diwata-2 Level 1 product generation.</p>
+<h3 id="raw-files">Raw Files</h3>
+<p><img alt="Overview of Raw Files Page" src="images/raw-files-overview.png" /></p>
+<p><center>Overview of Raw Files Page</center></p>
+<p>Page contents:</p>
+<ol>
+<li>Filters</li>
+<li>Download options</li>
+<li>Search bar to find keywords on the table</li>
+<li>View more details</li>
+</ol>
+<!-- #### How to apply filters to the table? -->
+
+<p>Filter Description</p>
+<table>
+<thead>
+<tr>
+<th>Filter Label</th>
+<th>Description</th>
+<th>List of Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>Filter by type</td>
+<td>XTLM, QTLM</td>
+</tr>
+<tr>
+<td>Receiving Station</td>
+<td>Filter by receiving station</td>
+<td>ASTI, TU, Hakodate, Kiruna</td>
+</tr>
+<tr>
+<td>Packet Loss</td>
+<td>Filter by range of packet loss in percentage</td>
+<td>Accepted Values: Integer from 0 to 100</td>
+</tr>
+<tr>
+<td>Satellite</td>
+<td>Filter by satellite</td>
+<td>Diwata-1, Diwata-2, Maya-1</td>
+</tr>
+<tr>
+<td>SHU Address</td>
+<td>Filter by SHU Address</td>
+<td>Accepted Value: Positive Integer</td>
+</tr>
+<tr>
+<td>Upload Time</td>
+<td>Filter by range of upload time.</td>
+<td>Sample: 2022-01-12 00:00:00 ~ 2022-02-16 23:59:59 <br /> Format: <code>YYYY-MM-DD HH:MM:SS</code></td>
+</tr>
+<tr>
+<td>Created Time</td>
+<td>Filter by range of created time.</td>
+<td>Sample: 2022-01-12 00:00:00 ~ 2022-02-16 23:59:59 <br /> Format: <code>YYYY-MM-DD HH:MM:SS</code></td>
+</tr>
+<tr>
+<td>Capture Time</td>
+<td>Filter by range of capture time.</td>
+<td>Sample: 2022-01-12 00:00:00 ~ 2022-02-16 23:59:59 <br /> Format: <code>YYYY-MM-DD HH:MM:SS</code></td>
+</tr>
+<tr>
+<td>Download Time</td>
+<td>Filter by range of download time.</td>
+<td>Sample: 2022-01-12 00:00:00 ~ 2022-02-16 23:59:59 <br /> Format: <code>YYYY-MM-DD HH:MM:SS</code></td>
+</tr>
+<tr>
+<td>Uploader</td>
+<td>Filter by uploader</td>
+<td>-----</td>
+</tr>
+</tbody>
+</table>
+<p><br /></p>
+<h4 id="how-to-view-more-details">How to view more details?</h4>
+<ol>
+<li>From the selected row, click the Eye Icon at the last row to display the drawer containing details of the selected capture file.</li>
+<li>The drawer has the following details:
+    <br />&nbsp;&nbsp;&nbsp;&nbsp; a. Image - click the icon at the top right side of the image to view in full screen. Press Esc to exit full screen. Available in Raw Image Page ang Merged Raw Image Page.
+    <br />&nbsp;&nbsp;&nbsp;&nbsp; b. Capture details
+    <br />&nbsp;&nbsp;&nbsp;&nbsp; c. Files - list of all downloadable files and images. Click the link to download. 
+    <br />&nbsp;&nbsp;&nbsp;&nbsp; d. Extracted Images - Click link to view image in new tab. Available in Telemetry Page only.
+    <br />&nbsp;&nbsp;&nbsp;&nbsp; e. Raw Images - Click link under Raw column to download the <code>.rg3</code> file. Click <code>.bin</code> link under Telemetry column to redirect to Telemetry, a drawer will appear to show details of Telemetry. Available in Merged Raw Images Page only.</li>
+</ol>
+<h4 id="how-to-download-data">How to download data?</h4>
+<p>Option 1: From table, using checkbox</p>
+<ol>
+<li>Tick the row/s you plan to download.</li>
+<li>Download button will be enabled when at least one row is selected.</li>
+<li>Choose from the file formats option you wish to download.</li>
+<li>Once a file format is selected, download will automatically proceed.</li>
+</ol>
+<p>Option 2: From Drawer</p>
+<ol>
+<li>From the chosen row, click the Eye Icon at the last row to display the drawer containing details of the selected capture file.</li>
+<li>Look for the <code>Files</code> section on the drawer.</li>
+<li>Click the link beside the file name you want to download.</li>
+<li>If clicked link is an image (.jpg), new tab will be opened to view the image. For other file format, clicked link will automatically download the selected file.</li>
+</ol>
+<h3 id="captures">Captures</h3>
+<p><img alt="Overview of Captures Page" src="images/captures-overview.png" /></p>
+<p><center>Overview of Captures Page</center></p>
+<p>Page contents:</p>
+<ol>
+<li>Filters</li>
+<li>Actions for multiple selected rows:
+<br />&nbsp;&nbsp;&nbsp;&nbsp; a. Move to Raw - available in Level 0 Page
+<br />&nbsp;&nbsp;&nbsp;&nbsp; b. Move to Level 0 - available in Level 1 Page
+<br />&nbsp;&nbsp;&nbsp;&nbsp; c. Add to Cart - for batch download, not available in Level 1 Page
+<br />&nbsp;&nbsp;&nbsp;&nbsp; d. Download options
+<br />&nbsp;&nbsp;&nbsp;&nbsp; e. Sync to Distribution - available in Level 1 Page</li>
+<li>Capture tags (editable field)</li>
+<li>More actions:
+<br />&nbsp;&nbsp;&nbsp;&nbsp; a. View more details
+<br />&nbsp;&nbsp;&nbsp;&nbsp; b. Move to Raw - available in Level 0 Page
+<br />&nbsp;&nbsp;&nbsp;&nbsp; c. Move to Level 0 - available in Level 1 Page
+<br />&nbsp;&nbsp;&nbsp;&nbsp; d. Add to Cart - for batch download, not available in Level 1 Page</li>
+<li>View Cart</li>
+</ol>
+<p><br /></p>
+<!-- #### How to apply filters to the table? -->
+
+<p>Filter Description</p>
+<table>
+<thead>
+<tr>
+<th>Filter Label</th>
+<th>Description</th>
+<th>List of Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Capture ID</td>
+<td>Filter by Capture ID</td>
+<td>----</td>
+</tr>
+<tr>
+<td>Is Published</td>
+<td>Filter by publish status. <br /> Default: All</td>
+<td>Published, Unpublished</td>
+</tr>
+<tr>
+<td>Band</td>
+<td>Filter by band. <br /> Multiple Select</td>
+<td>HPT-R, HPT-G, HPT-B, HPT-N, SMI-N, SMI-V, MFC, WFC</td>
+</tr>
+<tr>
+<td>Mission ID</td>
+<td>Filter by mission ID</td>
+<td>----</td>
+</tr>
+<tr>
+<td>Created Time</td>
+<td>Filter by range of created time.</td>
+<td>Sample: 2022-01-12 00:00:00 ~ 2022-02-16 23:59:59 <br /> Format: <code>YYYY-MM-DD HH:MM:SS</code></td>
+</tr>
+<tr>
+<td>Capture Date</td>
+<td>Filter by range of capture time.</td>
+<td>Sample: 2022-01-12 00:00:00 ~ 2022-02-16 23:59:59 <br /> Format: <code>YYYY-MM-DD HH:MM:SS</code></td>
+</tr>
+<tr>
+<td>Packet Loss</td>
+<td>Filter by range of packet loss in percentage</td>
+<td>Accepted Values: Integer from 0 to 100</td>
+</tr>
+<tr>
+<td>Products</td>
+<td>Filter by products. <br /> Multiple Select</td>
+<td>L1A, L1B, L1C, no L1A, no L1B, no L1C</td>
+</tr>
+<tr>
+<td>Tags</td>
+<td>Filter by tags. <br /> Multiple Select</td>
+<td>Urban, Vegetation, Coastal, Agriculture, Forestry, Processable</td>
+</tr>
+</tbody>
+</table>
+<h4 id="how-to-view-more-details_1">How to view more details?</h4>
+<ol>
+<li>From the selected row, click the Eye Icon at the last row to display the drawer containing details of the selected capture file.</li>
+<li>The drawer has the following details:
+    <br />&nbsp;&nbsp;&nbsp;&nbsp; a. Image - click the icon at the top right side of the image to view in full screen. Press Esc to exit full screen.
+    <br />&nbsp;&nbsp;&nbsp;&nbsp; b. Capture details
+    <br />&nbsp;&nbsp;&nbsp;&nbsp; c. Files - list of all downloadable files and images. Click the link to download.
+    <br />&nbsp;&nbsp;&nbsp;&nbsp; d. Georeferencing (POC only)</li>
+<li>Details from mission column is clickable to redirect to View Acquisition Mission Page.</li>
+</ol>
+<h4 id="how-to-download-data_1">How to download data?</h4>
+<p>Option 1: From table, using checkbox</p>
+<ol>
+<li>Tick the row/s you plan to download.</li>
+<li>Download button will be enabled when at least one row is selected.</li>
+<li>Choose from the file formats option you wish to download.</li>
+<li>Once a file format is selected, download will automatically proceed.</li>
+</ol>
+<p>Option 2: From Drawer</p>
+<ol>
+<li>From the chosen row, click the Eye Icon at the last row to display the drawer containing details of the selected capture file.</li>
+<li>Look for the <code>Files</code> section on the drawer.</li>
+<li>Click the link beside the file name you want to download.</li>
+<li>If clicked link is an image (.jpg), new tab will be opened to view the image. For other file format, clicked link will automatically download the selected file.</li>
+</ol>
+<p>Option 3: From download cart</p>
+<ol>
+<li>From the chosen row, click the Cart Icon at the last row to add to cart.</li>
+<li><code>View Cart</code> button, beside Profile in navigation bar, will appear if at least one capture is added to cart.</li>
+<li>Click <code>View Cart</code> button to redirect to Download Cart page.</li>
+<li>You may choose to download all, delete all or delete individual capture from the list.</li>
+</ol>
+<h3 id="capture-groups">Capture Groups</h3>
+<p><img alt="Overview of Capture Groups Page" src="images/capture-groups-overview.png" /></p>
+<p><center>Overview of Capture Groups Page</center></p>
+<p>Page contents:</p>
+<ol>
+<li>Filters</li>
+<li>Actions</li>
+<li>Search bar to find keywords on the table</li>
+<li>Capture ID - clickable to view and edit details</li>
+<li>Is Published - Toggle to allow capture to be available in distribution site (Image Browser)</li>
+<li>Capture tags (editable field)</li>
+<li>Capture Group - clickable to redirect to View Capture Group Page, available in Capture Group Products Page</li>
+<li>View details</li>
+</ol>
+<p><br /></p>
+<!-- #### How to apply filters to the table? -->
+
+<p>Filter Description</p>
+<table>
+<thead>
+<tr>
+<th>Filter Label</th>
+<th>Description</th>
+<th>List of Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Group Product ID</td>
+<td>Filter by Group Product ID</td>
+<td>----</td>
+</tr>
+<tr>
+<td>Is Published</td>
+<td>Filter by publish status. <br /> Default: All</td>
+<td>Published, Unpublished</td>
+</tr>
+<tr>
+<td>Payload</td>
+<td>Filter by payload. <br /> Multiple Select</td>
+<td>HPT, MFC, WFC, SMI, ERC</td>
+</tr>
+<tr>
+<td>Product Type</td>
+<td>Filter by product type.</td>
+<td>Stacked, Mosaic</td>
+</tr>
+<tr>
+<td>Tags</td>
+<td>Filter by tags. <br /> Multiple Select</td>
+<td>Urban, Vegetation, Coastal, Agriculture, Forestry, Processable</td>
+</tr>
+<tr>
+<td>Group ID</td>
+<td>Filter by Group ID</td>
+<td>----</td>
+</tr>
+<tr>
+<td>Created Time</td>
+<td>Filter by range of created time.</td>
+<td>Sample: 2022-01-12 00:00:00 ~ 2022-02-16 23:59:59 <br /> Format: <code>YYYY-MM-DD HH:MM:SS</code></td>
+</tr>
+<tr>
+<td>Upload Time</td>
+<td>Filter by range of upload time.</td>
+<td>Sample: 2022-01-12 00:00:00 ~ 2022-02-16 23:59:59 <br /> Format: <code>YYYY-MM-DD HH:MM:SS</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="how-to-view-more-details_2">How to view more details?</h4>
+<ol>
+<li>From the selected row, click the Eye Icon at the last row to display the drawer containing details of the selected capture file.</li>
+<li>The drawer has the following details:
+    <br />&nbsp;&nbsp;&nbsp;&nbsp; a. Image - click the icon at the top right side of the image to view in full screen. Press Esc to exit full screen.
+    <br />&nbsp;&nbsp;&nbsp;&nbsp; b. Capture details
+    <br />&nbsp;&nbsp;&nbsp;&nbsp; c. Capture Group Products - available in Capture Groups Page
+    <br />&nbsp;&nbsp;&nbsp;&nbsp; d. Captures - available in Capture Groups Page</li>
+<li>Another option is to click the ID from the <code>Id</code> column to redirect to View Page. From this page, some fields can be updated. Click <code>Save</code> button to submit changes.</li>
+<li>On Capture Group Products, <code>Capture Group</code> column details can be clickable. Once cliked, you will be redirected to View Capture Group Page.</li>
+</ol>
+<h4 id="how-to-update-publish-status">How to update publish status?</h4>
+<p>Option 1: From table, using checkbox</p>
+<ol>
+<li>Choose an action from the dropdown list above the table.</li>
+<li>Select caputure/s to update by ticking the check box on each row.</li>
+<li>If at least one mission is selected, the <code>Go</code> button beside the action dropdown list will be clickable, and number of selected missions will be shown beside the Go button.</li>
+<li>Click <code>Go</code> button to update selected missions.</li>
+</ol>
+<p>Option 2: From table, toggle publish/unpublish</p>
+<ol>
+<li>Toggle publish/unpublish under <code>Published?</code> column on the table.</li>
+</ol>
+<p>Option 3: From View Capture Group Page</p>
+<ol>
+<li>Click the capture group ID from the <code>Id</code> column to redirect to View Page.</li>
+<li>Check/uncheck the publish status field or change other editable fields.</li>
+<li>Click <code>Save</code> button to submit changes.</li>
+</ol>
 <h2 id="satellite-health-management">Satellite Health Management</h2>
 <h3 id="acu-logs">ACU Logs</h3>
 <p>Attitude Control Unit (ACU) log files contain information recorded onboard the satellite describing the state of its positioning and orientation at a given time. The ground station operators download the log files regularly from the satellites and upload them into a cloud service.</p>
 <p>Originally, the contents of the files can be inspected by manually running a depacketer software. This process was tedious and only provided information on-demand.</p>
 <h2 id="admin-management">Admin Management</h2>
+<p>Alternatively, users can login directly to the operations software backend to have additional access to the database especially when correcting data that are not editable in the Diwata Operations Software. For security purposes, however, not all users who have access to the Diwata Operations Software can login to the admin site. Some users may have limited access as well to protect data integrity. Users can access the site using this <a href="https://api.ops.stamina4space.upd.edu.ph/admin/">link</a>.
+<img alt="Screenshot of the homepage" src="images/operations-software-admin.png" /></p>
+<p>Upon logging in, the user will see all the accessible modules and data for viewing, adding, editing, and deleting. Access to these data and modules depends on the permissions granted to the user.
+<img alt="Screenshot of admin homepage" src="images/admin-homepage.png" />
+<img alt="Screenshot of admin homepage-2" src="images/admin-homepage-2.png" />
+<img alt="Screenshot of admin homepage-3" src="images/admin-homepage-3.png" /></p>
+<h3 id="adding-user-accounts">Adding user accounts</h3>
+<ol>
+<li>
+<p>Under the <strong>Authentication and Authorization</strong> group, select <strong>Users</strong> or click the <strong>Add</strong> button.
+<img alt="Screenshot of the site administration" src="images/add-users-1.png" />
+<br/><br/>Alternatively, you may also click the <strong>Add User</strong> button from the Users list.
+<img alt="Screenshot of users list" src="images/add-users-2.png" /></p>
+</li>
+<li>
+<p>Add the desired username and password. <strong>Note:</strong> Avoid using common passwords.
+<img alt="Screenshot of add users 1" src="images/add-users-3.png" /></p>
+</li>
+<li>
+<p>Click <strong>Save</strong> button. A message will confirm that the user has been saved and a dialog will open where you can edit user info and permissions.
+<img alt="Screenshot of add users 2" src="images/add-users-4.png" /></p>
+</li>
+</ol>
+<p>You may select individual/multiple permissions for each user.
+<img alt="Screenshot of add users 3" src="images/add-users-5.png" /></p>
+<p><img alt="Screenshot of add users 3" src="images/add-users-6.png" /></p>
 <h2 id="links">Links</h2>
 <ul>
 <li><a href="https://ops.stamina4space.upd.edu.ph/">Operations Software</a></li>
+<li><a href="https://api.ops.stamina4space.upd.edu.ph/admin/">Operations Software Admin Site</a></li>
 <li><a href="https://gitlab.com/grasped/operations-software/">Operations Software on Gitlab</a></li>
 </ul></div>
         
