@@ -532,11 +532,13 @@ Originally, the contents of the files can be inspected by manually running a dep
 ## STAC Management
 
 ### STAC Catalog
+
 STAC Catalog is the main endpoint of the Operations-Software Spatiotemporal Asset Catalog (STAC). It serves a response in json format of the main STAC metadata. It can be accessed through the following.
 
 ```
 https://ops.stamina4space.upd.edu.ph/stac_management/stac/
 ```
+
 
 ### STAC Collection
 Under the STAC Catalog, is the STAC Collection. The main endpoint for the collections is:
@@ -550,7 +552,6 @@ Each collection respose data can be accessed by its `stac_collection_id`.
 ```
 https://ops.stamina4space.upd.edu.ph/stac_management/stac/collections/<stac_collection_id>
 ```
-
 
 ### STAC Item
 
