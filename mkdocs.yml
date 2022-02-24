@@ -7,7 +7,8 @@ nav:
   - User Guides:
       - Data Processing Tools: user/data_processing_tools
       - Diwata Browser for QGIS: user/diwata_browser_qgis
-      - Operations Software: user/operations_software
+      - Operations Software (Users): user/operations_software
+      - Operations Software (Admins): user/operations_software_admin
       - PR Site: user/pr_site
   - Technical Guides:
       - Image Browser: technical/image_browser
