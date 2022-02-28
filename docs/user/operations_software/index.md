@@ -119,6 +119,18 @@ Basic functions on Download includes, add download mission, filter missions, edi
 
 ### ACU Log Download Missions
 
+![Batch](images/acu-log.png)
+
+1. You may click the ACU Log Download Missions button to view and update the current records or the Add button if you want to add a new record.
+
+![Batch](images/add-acu-log.png)
+
+Add the necessary parameters for the mission, and then click Save.
+
+2. Perform filters by selecting values on the drop-downs.
+3. You can view details of the ACU log item when you click the ID. You can also perform batch operations by checking the check-boxes. You can select multiple.
+4. You can also view the commands by click the items on the Command column.
+
 ### Commands and Command Batches
 
 ### Reports
