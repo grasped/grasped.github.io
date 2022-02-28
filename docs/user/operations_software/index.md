@@ -108,6 +108,15 @@ Basic functions on Upload Mission includes, add upload mission, filter missions,
 
 ### Download Missions
 
+![Batch](images/download-mission.png)
+
+Basic functions on Download includes, add download mission, filter missions, edit commands on the table and perform batch actions. Fairly similar with the Upload mission module.
+
+1. Click the Add Download Mission. Add the necessary parameters for the download mission, and then click Save. You may also choose Save and add another if you wish to save another record, or Save and continue editing if you don't want to view and edit the recorded data. Some settings are Diwata-2 specific settings so you need to input necessary parameters for the compiler to work properly. Add the bands, starting addresses, and number of images to be downloaded, respectively.
+
+2. Perform filters by selection values on the drop-downs.
+3. You can perform batch actions when selecting an item on table. You can select multiple.
+
 ### ACU Log Download Missions
 
 ### Commands and Command Batches
