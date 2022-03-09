@@ -233,3 +233,46 @@ Alternatively, you may input the ID of the command in the text box provided.
 
 
 ## Data Management
+
+
+
+## Satellite Health Management
+
+### ACU Logs
+Attitude Control Unit (ACU) log files contain information recorded onboard the satellite describing the state of its positioning and orientation at a given time. The ground station operators download the log files regularly from the satellites and upload them into a cloud service.
+
+Originally, the contents of the files can be inspected by manually running a depacketer software. This process was tedious and only provided information on-demand.
+
+![Screenshot of Satellite Health Management](images/satellite-health-management-2.png)
+<br> Highlighted above are the important components of this module.
+
+1. **Raw Log Files** - raw log files are downloaded from the satellite. An automated depacketer runs at a regular interval to depacket new Raw Log Files. Then the raw files and the depacketed data are uploaded to the operations software
+<br>
+<br>![Screenshot of List of Raw Log Files](images/raw-log-files.png)
+<br> **Raw Log Files Batch Operations**
+    * Click on the checkbox beside each record to select a record. You may also click the uppermost checkbox to select all the records in the current page. Open the dropdown menu above the table and select the action you want to perform. Then, click Go. 
+<br>![Screenshot of List of Raw Log Files](images/raw-log-files-delete-1.png)
+    * A prompt will be shown when trying to delete records. Review and confirm that the data can be deleted before proceeding.
+<br>![Screenshot of List of Raw Log Files 2](images/raw-log-files-delete-2.png)
+
+    * **Note:** Always be careful when deleting multiple data. 
+
+
+2. **CSV Log Files** - the product of depacketing Raw Log Files. These files can be opened in a spreadsheet application or a script for further processing and analysis.
+The CSV file can be Group1, Group2, or Group3 logs. Each group contains different columns.
+<br>![Screenshot of List of CSV Log Files](images/csv-log-files.png)
+
+* **Note**: Kindly refer to Raw Log Files Batch Operations for the multiple deletion of CSV Log Files.
+
+3. **G1-G3 Logs** - each group contains consolidated data of each row of each group. This allows users to query all data of each group within a specific timeframe instead of downloading individual CSV files.
+    * **Group1 Logs**
+    <br>![Screenshot of G1 Log](images/g1-log.png)
+    * **Group2 Logs**
+    <br>![Screenshot of G2 Logs](images/g2-log-1.png)
+    ![Screenshot of G2 Logs 2](images/g2-log-2.png)![Screenshot of G2 Logs 3](images/g2-log-3.png)![Screenshot of G2 Logs 4](images/g2-log-4.png)![Screenshot of G2 Logs 5](images/g2-log-5.png)
+    * **Group3 Logs**
+    <br>![Screenshot of G3 Logs](images/g3-log-1.png)
+    ![Screenshot of G3 Logs 2](images/g3-log-2.png)![Screenshot of G3 Logs 3](images/g3-log-3.png)![Screenshot of G3 Logs 4](images/g3-log-4.png)![Screenshot of G3 Logs 5](images/g3-log-5.png)
+
+
+**Note:** Files generated in this module are uploaded using an automated pipeline. It is not advisable to edit/delete files/data in this module.
