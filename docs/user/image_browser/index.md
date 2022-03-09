@@ -2,7 +2,9 @@
 title: Diwata Image Browser
 ---
 
-# Accessing the Website
+# Image Browser
+
+## Accessing the Website
 
 
 ## Sign up Page
