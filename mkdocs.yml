@@ -10,6 +10,7 @@ nav:
       - Operations Software (Users): user/operations_software
       - Operations Software (Admins): user/operations_software_admin
       - PR Site: user/pr_site
+      - Image Browser: user/image_browser
   - Technical Guides:
       - Image Browser: technical/image_browser
       - Operations Software: technical/operations_software
