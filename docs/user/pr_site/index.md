@@ -12,11 +12,6 @@ Admin URL: [https://stamina4space.upd.edu.ph/wp-admin](https://stamina4space.upd
 
 ## Authentication
 
-```
-username: admin
-password: Z9E(WCJMyWFejd2!bqTd0b&x
-```
-
 ## Creating Article Posts
 
 #### Find `Posts` in the sidemenu and click `Add New` button.
