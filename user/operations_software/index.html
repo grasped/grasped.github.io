@@ -93,7 +93,13 @@
                         
                             
 <li >
-    <a href=".">Operations Software</a>
+    <a href=".">Operations Software (Users)</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../operations_software_admin">Operations Software (Admins)</a>
 </li>
 
                         
@@ -166,9 +172,6 @@
             <li class="second-level"><a href="#satellite-health-management">Satellite Health Management</a></li>
                 
                 <li class="third-level"><a href="#acu-logs">ACU Logs</a></li>
-            <li class="second-level"><a href="#admin-management">Admin Management</a></li>
-                
-                <li class="third-level"><a href="#adding-user-accounts">Adding user accounts</a></li>
             <li class="second-level"><a href="#links">Links</a></li>
                 
     </ul>
@@ -221,7 +224,7 @@ Management.</p>
 <tr>
 <td>Purpose</td>
 <td>Filter by purpose</td>
-<td>Agriculture, Agriculture Validation, Agroforestry, Aquaculture, Calibration Validation, Coastal Monitoring, Cultural Heritage, Fisheries, Forest Validation, Forestry, Flood and storm surge, Land Use Change, Ocean Validation, Protected Area, Security, Typhoon, Tourism, Urban, Validation Site(urban)  </br> Default value: All</td>
+<td>Agriculture, Agriculture Validation, Agroforestry, Aquaculture, Calibration Validation, Coastal Monitoring, Cultural Heritage, Fisheries, Forest Validation, Forestry, Flood and storm surge, Land Use Change, Ocean Validation, Protected Area, Security, Typhoon, Tourism, Urban, Validation Site(urban) </br> Default value: All</td>
 </tr>
 </tbody>
 </table>
@@ -241,46 +244,6 @@ Management.</p>
 <li>If details are edited, click <code>Submit</code> button to update.</li>
 </ol>
 <h3 id="acquisition-missions">Acquisition Missions</h3>
-<h4 id="using-the-admin-site">Using the Admin Site</h4>
-<h5 id="adding-a-new-acquisition-mission">Adding a new Acquisition Mission</h5>
-<ol>
-<li>
-<p>Login to the admin site with your credentials. You may contact the system administrator if you still don't have an account.</p>
-</li>
-<li>
-<p>Look for the Missions module under the MISSIONS_MANAGEMENT subgroup.
-<img alt="Screenshot of Acquisition Missions" src="images/acquisition-missions.png" /></p>
-</li>
-<li>
-<p>You may click the Missions button to view and update the current records or the Add button if you want to add a new record.
-<img alt="Screenshot of Add Acquisition Missions" src="images/acquisition-missions-2.png" /></p>
-</li>
-<li>
-<p>Add the necessary parameters for the mission, and then click Save. You may also choose Save and add another if you wish to save another record, or Save and continue editing if you don't want to view and edit the recorded data.
-<img alt="Screenshot of Add Acquisition Missions" src="images/add-mission-1.png" /></p>
-</li>
-</ol>
-<p>Some settings are Diwata-2 specific settings so you need to input necessary parameters for the compiler to work properly.</p>
-<p><img alt="Screenshot of Add Acquisition Missions" src="images/add-mission-2.png" /></p>
-<p>Unchecking this box will prevent the command compiler from executing.
-<img alt="Screenshot of Add Acquisition Missions" src="images/add-mission-3.png" /></p>
-<p>Add the payloads to be used.
-<img alt="Screenshot of Add Acquisition Missions" src="images/add-mission-4.png" /></p>
-<p><strong>Note:</strong> As of April 5, 2020, generating commands for Diwata-1 will result in TLE errors because Diwata-1 has already been decommissioned. Command Compiler tries to fetch the latest TLE values from the server and will return an error if the TLE's epoch date is older than 7 days.</p>
-<h5 id="batch-operations-for-acquisition-missions">Batch operations for Acquisition Missions</h5>
-<ol>
-<li>
-<p>Click on the checkbox beside each record to select a record. You may also click the uppermost checkbox to select all the records in the current page.
-<img alt="Screenshot of Batch Acquisition Missions" src="images/acquisition-missions-batch-1.png" /></p>
-</li>
-<li>
-<p>Open the dropdown menu above the table and select the action you want to perform. Then, click Go. 
-<img alt="Screenshot of Batch Acquisition Missions" src="images/acquisition-missions-batch-2.png" /></p>
-</li>
-</ol>
-<p>A prompt will be shown when trying to delete records. Review and confirm that the data can be deleted before proceeding.
-<img alt="Screenshot of Batch Acquisition Missions" src="images/acquisition-missions-batch-3.png" /></p>
-<p><strong>Note:</strong> Please be careful when deleting multiple data. </p>
 <h4 id="how-to-update-status-of-missions">How to update status of missions?</h4>
 <p>Filter Description</p>
 <table>
@@ -313,7 +276,7 @@ Management.</p>
 <ol>
 <li>On the acquisition mission page, click the <code>Add Missions</code> button at the upper right side of filters to redirect to Add Acquisition Missions Page.</li>
 <li>Fill out the form.</li>
-<li>On the Mission Cameras part at the end of the form, click the <code>Add Mission Camera</code> button to create a new form for Camera #1. If you need to add more cameras, click the  <code>Add Mission Camera</code> button. If you need to remove a camera, click the <code>Remove</code> button. </li>
+<li>On the Mission Cameras part at the end of the form, click the <code>Add Mission Camera</code> button to create a new form for Camera #1. If you need to add more cameras, click the <code>Add Mission Camera</code> button. If you need to remove a camera, click the <code>Remove</code> button.</li>
 <li>After filling out the form, click <code>Submit</code> button.</li>
 <li>New mission will be added to the table in Acquisition Missions Page.</li>
 </ol>
@@ -330,156 +293,62 @@ Management.</p>
 <li>Click <code>Go</code> button to update selected missions.</li>
 </ol>
 <h3 id="upload-missions">Upload Missions</h3>
-<h4 id="using-the-admin-site_1">Using the Admin Site</h4>
-<h5 id="adding-a-new-acquisition-mission_1">Adding a new Acquisition Mission</h5>
+<p><img alt="Upload Missions" src="images/upload-missions.png" /></p>
+<p>Basic functions on Upload Mission includes, add upload mission, filter missions, edit commands on the table and perform batch actions.</p>
 <ol>
-<li>
-<p>Login to the admin site with your credentials. You may contact the system administrator if you still don't have an account.</p>
-</li>
-<li>
-<p>Look for the Upload missions module under the MISSIONS_MANAGEMENT subgroup.
-<img alt="Screenshot of Upload Missions" src="images/upload-missions.png" /></p>
-</li>
-<li>
-<p>You may click the Upload missions button to view and update the current records or the Add button if you want to add a new record.
-<img alt="Screenshot of Add Acquisition Missions" src="images/upload-missions-2.png" /></p>
-</li>
-<li>
-<p>Add the necessary parameters for the upload mission, and then click Save. You may also choose Save and add another if you wish to save another record, or Save and continue editing if you don't want to view and edit the recorded data.
-<img alt="Screenshot of Add Acquisition Missions" src="images/upload-missions-3.png" /></p>
-</li>
+<li>Click the Add Upload Mission. Add the necessary parameters for the upload mission, and then click Save. You may also choose Save and add another if you wish to save another record, or Save and continue editing if you don't want to view and edit the recorded data.</li>
+<li>Perform filters by selection values on the drop-downs.</li>
+<li>You can perform batch actions when selecting an item on table. You can select multiple.</li>
 </ol>
-<p><strong>Note:</strong> Unchecking Generate commands will prevent the command compiler from executing. This means that the error below will not occur and the record will still be successfully saved but without the generated commands.</p>
-<p><strong>Note:</strong> As of April 5, 2020, generating commands for Diwata-1 will result in TLE errors because Diwata-1 has already been decommissioned. Command Compiler tries to fetch the latest TLE values from the server and will return an error if the TLE's epoch date is older than 7 days.</p>
-<h5 id="batch-operations-for-upload-missions">Batch operations for Upload Missions</h5>
-<ol>
-<li>
-<p>Click on the checkbox beside each record to select a record. You may also click the uppermost checkbox to select all the records in the current page.
-<img alt="Screenshot of Batch Upload Missions" src="images/upload-missions-batch-1.png" /></p>
-</li>
-<li>
-<p>Open the dropdown menu above the table and select the action you want to perform. Then, click Go. 
-<img alt="Screenshot of Batch Upload Missions" src="images/upload-missions-batch-2.png" /></p>
-</li>
-</ol>
-<p>A prompt will be shown when trying to delete records. Review and confirm that the data can be deleted before proceeding.
-<img alt="Screenshot of Batch Upload Missions" src="images/upload-missions-batch-3.png" /></p>
-<p><strong>Note:</strong> Please be careful when deleting multiple data. </p>
+<p><img alt="Batch" src="images/upload-mission-batch.png" /></p>
 <h3 id="download-missions">Download Missions</h3>
-<h4 id="using-the-admin-site_2">Using the Admin Site</h4>
-<h5 id="adding-a-new-download-mission">Adding a new Download Mission</h5>
+<p><img alt="Batch" src="images/download-mission.png" /></p>
+<p>Basic functions on Download includes, add download mission, filter missions, edit commands on the table and perform batch actions. Fairly similar with the Upload mission module.</p>
 <ol>
 <li>
-<p>Login to the admin site with your credentials. You may contact the system administrator if you still don't have an account.</p>
+<p>Click the Add Download Mission. Add the necessary parameters for the download mission, and then click Save. You may also choose Save and add another if you wish to save another record, or Save and continue editing if you don't want to view and edit the recorded data. Some settings are Diwata-2 specific settings so you need to input necessary parameters for the compiler to work properly. Add the bands, starting addresses, and number of images to be downloaded, respectively.</p>
 </li>
 <li>
-<p>Look for the Download Missions module under the MISSIONS_MANAGEMENT subgroup.
-<img alt="Screenshot of Download Missions" src="images/download-missions.png" /></p>
+<p>Perform filters by selection values on the drop-downs.</p>
 </li>
-<li>
-<p>You may click the Download Missions button to view and update the current records or the Add button if you want to add a new record.
-<img alt="Screenshot of Add Download Missions" src="images/download-missions-2.png" /></p>
-</li>
-<li>
-<p>Add the necessary parameters for the mission, and then click Save. You may also choose Save and add another if you wish to save another record, or Save and continue editing if you don't want to view and edit the recorded data.
-<img alt="Screenshot of Add Download Missions" src="images/add-download-mission-1.png" /></p>
-</li>
+<li>You can perform batch actions when selecting an item on table. You can select multiple.</li>
 </ol>
-<p>Some settings are Diwata-2 specific settings so you need to input necessary parameters for the compiler to work properly.</p>
-<p><img alt="Screenshot of Add Download Missions" src="images/add-download-mission-2.png" /></p>
-<p>Unchecking this box will prevent the command compiler from executing.
-<img alt="Screenshot of Add Download Missions" src="images/add-download-mission-3.png" /></p>
-<p>Add the bands, starting addresses, and number of images to be downloaded, respectively.
-<img alt="Screenshot of Add Download Missions" src="images/add-download-mission-4.png" /></p>
-<p><strong>Note:</strong> As of April 5, 2020, generating commands for Diwata-1 will result in TLE errors because Diwata-1 has already been decommissioned. Command Compiler tries to fetch the latest TLE values from the server and will return an error if the TLE's epoch date is older than 7 days.</p>
-<h5 id="batch-operations-for-download-missions">Batch operations for Download Missions</h5>
-<ol>
-<li>
-<p>Click on the checkbox beside each record to select a record. You may also click the uppermost checkbox to select all the records in the current page.
-<img alt="Screenshot of Batch Download Missions" src="images/download-missions-batch-1.png" /></p>
-</li>
-<li>
-<p>Open the dropdown menu above the table and select the action you want to perform. Then, click Go. 
-<img alt="Screenshot of Batch Download Missions" src="images/download-missions-batch-2.png" /></p>
-</li>
-</ol>
-<p>A prompt will be shown when trying to delete records. Review and confirm that the data can be deleted before proceeding.
-<img alt="Screenshot of Batch Download Missions" src="images/download-missions-batch-3.png" /></p>
-<p><strong>Note:</strong> Please be careful when deleting multiple data. </p>
-<p><strong>Note:</strong> As of April 5, 2020, generating commands for Diwata-1 will result in TLE errors because Diwata-1 has already been decommissioned. Command Compiler tries to fetch the latest TLE values from the server and will return an error if the TLE's epoch date is older than 7 days.</p>
 <h3 id="acu-log-download-missions">ACU Log Download Missions</h3>
-<h4 id="using-the-admin-site_3">Using the Admin Site</h4>
-<h5 id="adding-a-new-acu-log-download-mission">Adding a new ACU Log Download Mission</h5>
+<p><img alt="Batch" src="images/acu-log.png" /></p>
 <ol>
-<li>
-<p>Login to the admin site with your credentials. You may contact the system administrator if you still don't have an account.</p>
-</li>
-<li>
-<p>Look for the ACU Log Download Missions module under the MISSIONS_MANAGEMENT subgroup.
-<img alt="Screenshot of ACU Log Download Missions" src="images/acu-log-download-missions.png" /></p>
-</li>
-<li>
-<p>You may click the ACU Log Download Missions button to view and update the current records or the Add button if you want to add a new record.
-<img alt="Screenshot of Add ACU Log Download Missions" src="images/acu-log-download-missions-2.png" /></p>
-</li>
-<li>
-<p>Add the necessary parameters for the mission, and then click Save. You may also choose Save and add another if you wish to save another record, or Save and continue editing if you don't want to view and edit the recorded data.
-<img alt="Screenshot of Add ACU Log Download Missions" src="images/add-acu-log-download-mission-1.png" /></p>
-</li>
+<li>You may click the ACU Log Download Missions button to view and update the current records or the Add button if you want to add a new record.</li>
 </ol>
-<p><img alt="Screenshot of Add ACU Log Download Missions" src="images/add-acu-log-download-mission-2.png" /></p>
-<p>Unchecking this box will prevent the command compiler from executing.
-<img alt="Screenshot of Add Download Missions" src="images/add-acu-log-download-mission-3.png" /></p>
-<h5 id="batch-operations-for-acu-log-download-missions">Batch operations for ACU Log Download Missions</h5>
+<p><img alt="Batch" src="images/add-acu-log.png" /></p>
+<p>Add the necessary parameters for the mission, and then click Save.</p>
 <ol>
-<li>
-<p>Click on the checkbox beside each record to select a record. You may also click the uppermost checkbox to select all the records in the current page.
-<img alt="Screenshot of Batch ACU Log Download Missions" src="images/acu-log-download-missions-batch-1.png" /></p>
-</li>
-<li>
-<p>Open the dropdown menu above the table and select the action you want to perform. Then, click Go. 
-<img alt="Screenshot of Batch ACU Log Download Missions" src="images/acu-log-download-missions-batch-2.png" /></p>
-</li>
+<li>Perform filters by selecting values on the drop-downs.</li>
+<li>You can view details of the ACU log item when you click the ID. You can also perform batch operations by checking the check-boxes. You can select multiple.</li>
+<li>You can also view the commands by click the items on the Command column.</li>
 </ol>
-<p>A prompt will be shown when trying to delete records. Review and confirm that the data can be deleted before proceeding.
-<img alt="Screenshot of Batch ACU Log Download Missions" src="images/acu-log-download-missions-batch-3.png" /></p>
-<p><strong>Note:</strong> Please be careful when deleting multiple data. </p>
 <h3 id="commands-and-command-batches">Commands and Command Batches</h3>
-<h4 id="using-the-admin-site_4">Using the Admin Site</h4>
-<p>Commands are generated by default whenever missions are created. The list of commands can be found in the Command module of Missions Management module.
-<img alt="Screenshot of Commands" src="images/commands.png" /></p>
-<h5 id="viewing-and-editing-commands">Viewing and Editing commands</h5>
+<h4 id="command-module">Command Module</h4>
+<p><img alt="Command" src="images/view-command-list.png" /></p>
+<p>Commands are generated by default whenever missions are created. The list of commands can be found in the Command tab.</p>
+<h4 id="viewing-a-command">Viewing a command</h4>
+<ul>
+<li>Upon clicking the Commands button, you will see all the generated commands from all the different missions (acquisition, download, etc.). Click on the ID to view/edit the content of a command.</li>
+</ul>
+<p><img alt="Command Batches" src="images/view-command.png" /></p>
+<p>You can now edit the fields and click save after performing a change.</p>
+<p><b>Note:</b> Commands that are created using the Add command module cannot be linked to an existing mission. To be able to link a mission and a command, create a mission and then find the generated command and edit it.</p>
+<hr/>
+
+<h4 id="command-batch-module">Command Batch Module</h4>
+<p><img alt="Command Batches" src="images/command-batches.png" /></p>
+<p>Command batches are a group of commands. It may be a combination of upload, download, acu log download, and acquisition missions.</p>
+<p><img alt="Command Batch Add" src="images/add-command-batch.png" /></p>
 <ol>
-<li>
-<p>Upon clicking the <strong>Commands</strong> button, you will see all the generated commands from all the different missions (acquisition, download, etc.). Click on the ID to view/edit the content of a command.
-<img alt="Screenshot of all Commands" src="images/commands-2.png" /></p>
-</li>
-<li>
-<p>Edit the content part of the command and click <strong>Save</strong>.
-<img alt="Screenshot of all commands" src="images/commands-3.png" /></p>
-</li>
+<li>To create a batch, go to the command batches module or click the Add button.</li>
+<li>Add the necessary parameters.</li>
 </ol>
-<p><strong>Note:</strong> Commands that are created using the Add command module cannot be linked to an existing mission. To be able to link a mission and a command, create a mission and then find the generated command and edit it. Command compiler will execute everytime <strong>any of the three Save</strong> button is pressed. To prevent the command from being replaced, uncheck the <strong>Create commands</strong> button before saving the mission.
-<img alt="Screenshot of Generated commands from an existing acquisition mission" src="images/mission-commands.png" /></p>
-<h5 id="creating-command-batches">Creating command batches</h5>
-<p>Command batches are a group of commands. It may be a combination of upload, download, acu log download, and acquisition missions. </p>
-<ol>
-<li>To create a batch, go to the <strong>command batches</strong> module or click the <strong>Add</strong> button.</li>
-</ol>
-<p><img alt="Screenshot of Command Batches 1" src="images/command-batches-1.png" /></p>
-<p>If you're already on the list of command batches, you may click the <strong>Add Command batch</strong> on the top right corner of the site.
-<img alt="Screenshot of Command Batches 2" src="images/command-batches-2.png" /></p>
-<ol>
-<li>Add the necessary parameters needed.
-<img alt="Screenshot of Add command batch 1" src="images/add-command-batch-1.png" /></li>
-</ol>
-<p>This part will reflect the generated batch after saving the command batch.
-<img alt="Screenshot of Add command batch 1" src="images/add-command-batch-2.png" /></p>
-<p>Supply the ID of the command that will be added to the batch. To select from the list of commands, you may click the search icon beside the text box.</p>
-<p><img alt="Screenshot of Add command batch 1" src="images/add-command-batch-3.png" /></p>
-<p>A window with the list of commands will popup. Selecting the ID will supply the text box with the command.</p>
-<p><img alt="Screenshot of Add command batch 1" src="images/add-command-batch-4.png" /></p>
-<p>Alternatively, you may input the ID of the command in the text box provided.</p>
+<h4 id="command-batch-list">Command Batch List</h4>
+<p><img alt="Command Batch list module" src="images/comand-batch-list-add.png" /></p>
+<p>Supply the ID of the command that will be added to the batch. You can add multiple.</p>
 <h3 id="reports">Reports</h3>
 <p><img alt="Overview of Reports Page" src="images/reports-overview.PNG" /></p>
 <p><center>Overview of Reports Page</center></p>
@@ -492,7 +361,7 @@ Management.</p>
 <h4 id="how-to-apply-filters">How to apply filters?</h4>
 <ol>
 <li>On the upper left side, select a satellite to filter data shown on graphs and table. Once satellite filter is changed, graphs and table will reload and new data will be fetched based on the selected satellite. Default value of satellite filter is Diwata-1.</li>
-<li>On the upper right side is the date range filter. To apply this filter, select two dates from the date range selector. To cancel this filter,  click the <code>All</code> button. As default, data shown on graphs and table shows <code>All</code> or no date range is initially set.</li>
+<li>On the upper right side is the date range filter. To apply this filter, select two dates from the date range selector. To cancel this filter, click the <code>All</code> button. As default, data shown on graphs and table shows <code>All</code> or no date range is initially set.</li>
 <li>From the PERCENTAGE COVERED IN THE PHILIPPINES, data shown on the map can be filtered by payload. Initially, data captured by SMI, HPT and ERC are included. Toggle the payload to exclude it on map.</li>
 <li>Refresh page to reset all filters.</li>
 </ol>
@@ -578,11 +447,11 @@ Management.</p>
 <ol>
 <li>From the selected row, click the Eye Icon at the last row to display the drawer containing details of the selected capture file.</li>
 <li>The drawer has the following details:
-    <br />&nbsp;&nbsp;&nbsp;&nbsp; a. Image - click the icon at the top right side of the image to view in full screen. Press Esc to exit full screen. Available in Raw Image Page ang Merged Raw Image Page.
-    <br />&nbsp;&nbsp;&nbsp;&nbsp; b. Capture details
-    <br />&nbsp;&nbsp;&nbsp;&nbsp; c. Files - list of all downloadable files and images. Click the link to download. 
-    <br />&nbsp;&nbsp;&nbsp;&nbsp; d. Extracted Images - Click link to view image in new tab. Available in Telemetry Page only.
-    <br />&nbsp;&nbsp;&nbsp;&nbsp; e. Raw Images - Click link under Raw column to download the <code>.rg3</code> file. Click <code>.bin</code> link under Telemetry column to redirect to Telemetry, a drawer will appear to show details of Telemetry. Available in Merged Raw Images Page only.</li>
+   <br />&nbsp;&nbsp;&nbsp;&nbsp; a. Image - click the icon at the top right side of the image to view in full screen. Press Esc to exit full screen. Available in Raw Image Page ang Merged Raw Image Page.
+   <br />&nbsp;&nbsp;&nbsp;&nbsp; b. Capture details
+   <br />&nbsp;&nbsp;&nbsp;&nbsp; c. Files - list of all downloadable files and images. Click the link to download.
+   <br />&nbsp;&nbsp;&nbsp;&nbsp; d. Extracted Images - Click link to view image in new tab. Available in Telemetry Page only.
+   <br />&nbsp;&nbsp;&nbsp;&nbsp; e. Raw Images - Click link under Raw column to download the <code>.rg3</code> file. Click <code>.bin</code> link under Telemetry column to redirect to Telemetry, a drawer will appear to show details of Telemetry. Available in Merged Raw Images Page only.</li>
 </ol>
 <h4 id="how-to-download-data">How to download data?</h4>
 <p>Option 1: From table, using checkbox</p>
@@ -606,17 +475,17 @@ Management.</p>
 <ol>
 <li>Filters</li>
 <li>Actions for multiple selected rows:
-<br />&nbsp;&nbsp;&nbsp;&nbsp; a. Move to Raw - available in Level 0 Page
-<br />&nbsp;&nbsp;&nbsp;&nbsp; b. Move to Level 0 - available in Level 1 Page
-<br />&nbsp;&nbsp;&nbsp;&nbsp; c. Add to Cart - for batch download, not available in Level 1 Page
-<br />&nbsp;&nbsp;&nbsp;&nbsp; d. Download options
-<br />&nbsp;&nbsp;&nbsp;&nbsp; e. Sync to Distribution - available in Level 1 Page</li>
+   <br />&nbsp;&nbsp;&nbsp;&nbsp; a. Move to Raw - available in Level 0 Page
+   <br />&nbsp;&nbsp;&nbsp;&nbsp; b. Move to Level 0 - available in Level 1 Page
+   <br />&nbsp;&nbsp;&nbsp;&nbsp; c. Add to Cart - for batch download, not available in Level 1 Page
+   <br />&nbsp;&nbsp;&nbsp;&nbsp; d. Download options
+   <br />&nbsp;&nbsp;&nbsp;&nbsp; e. Sync to Distribution - available in Level 1 Page</li>
 <li>Capture tags (editable field)</li>
 <li>More actions:
-<br />&nbsp;&nbsp;&nbsp;&nbsp; a. View more details
-<br />&nbsp;&nbsp;&nbsp;&nbsp; b. Move to Raw - available in Level 0 Page
-<br />&nbsp;&nbsp;&nbsp;&nbsp; c. Move to Level 0 - available in Level 1 Page
-<br />&nbsp;&nbsp;&nbsp;&nbsp; d. Add to Cart - for batch download, not available in Level 1 Page</li>
+   <br />&nbsp;&nbsp;&nbsp;&nbsp; a. View more details
+   <br />&nbsp;&nbsp;&nbsp;&nbsp; b. Move to Raw - available in Level 0 Page
+   <br />&nbsp;&nbsp;&nbsp;&nbsp; c. Move to Level 0 - available in Level 1 Page
+   <br />&nbsp;&nbsp;&nbsp;&nbsp; d. Add to Cart - for batch download, not available in Level 1 Page</li>
 <li>View Cart</li>
 </ol>
 <p><br /></p>
@@ -683,10 +552,10 @@ Management.</p>
 <ol>
 <li>From the selected row, click the Eye Icon at the last row to display the drawer containing details of the selected capture file.</li>
 <li>The drawer has the following details:
-    <br />&nbsp;&nbsp;&nbsp;&nbsp; a. Image - click the icon at the top right side of the image to view in full screen. Press Esc to exit full screen.
-    <br />&nbsp;&nbsp;&nbsp;&nbsp; b. Capture details
-    <br />&nbsp;&nbsp;&nbsp;&nbsp; c. Files - list of all downloadable files and images. Click the link to download.
-    <br />&nbsp;&nbsp;&nbsp;&nbsp; d. Georeferencing (POC only)</li>
+   <br />&nbsp;&nbsp;&nbsp;&nbsp; a. Image - click the icon at the top right side of the image to view in full screen. Press Esc to exit full screen.
+   <br />&nbsp;&nbsp;&nbsp;&nbsp; b. Capture details
+   <br />&nbsp;&nbsp;&nbsp;&nbsp; c. Files - list of all downloadable files and images. Click the link to download.
+   <br />&nbsp;&nbsp;&nbsp;&nbsp; d. Georeferencing (POC only)</li>
 <li>Details from mission column is clickable to redirect to View Acquisition Mission Page.</li>
 </ol>
 <h4 id="how-to-download-data_1">How to download data?</h4>
@@ -784,10 +653,10 @@ Management.</p>
 <ol>
 <li>From the selected row, click the Eye Icon at the last row to display the drawer containing details of the selected capture file.</li>
 <li>The drawer has the following details:
-    <br />&nbsp;&nbsp;&nbsp;&nbsp; a. Image - click the icon at the top right side of the image to view in full screen. Press Esc to exit full screen.
-    <br />&nbsp;&nbsp;&nbsp;&nbsp; b. Capture details
-    <br />&nbsp;&nbsp;&nbsp;&nbsp; c. Capture Group Products - available in Capture Groups Page
-    <br />&nbsp;&nbsp;&nbsp;&nbsp; d. Captures - available in Capture Groups Page</li>
+   <br />&nbsp;&nbsp;&nbsp;&nbsp; a. Image - click the icon at the top right side of the image to view in full screen. Press Esc to exit full screen.
+   <br />&nbsp;&nbsp;&nbsp;&nbsp; b. Capture details
+   <br />&nbsp;&nbsp;&nbsp;&nbsp; c. Capture Group Products - available in Capture Groups Page
+   <br />&nbsp;&nbsp;&nbsp;&nbsp; d. Captures - available in Capture Groups Page</li>
 <li>Another option is to click the ID from the <code>Id</code> column to redirect to View Page. From this page, some fields can be updated. Click <code>Save</code> button to submit changes.</li>
 <li>On Capture Group Products, <code>Capture Group</code> column details can be clickable. Once cliked, you will be redirected to View Capture Group Page.</li>
 </ol>
@@ -813,33 +682,6 @@ Management.</p>
 <h3 id="acu-logs">ACU Logs</h3>
 <p>Attitude Control Unit (ACU) log files contain information recorded onboard the satellite describing the state of its positioning and orientation at a given time. The ground station operators download the log files regularly from the satellites and upload them into a cloud service.</p>
 <p>Originally, the contents of the files can be inspected by manually running a depacketer software. This process was tedious and only provided information on-demand.</p>
-<h2 id="admin-management">Admin Management</h2>
-<p>Alternatively, users can login directly to the operations software backend to have additional access to the database especially when correcting data that are not editable in the Diwata Operations Software. For security purposes, however, not all users who have access to the Diwata Operations Software can login to the admin site. Some users may have limited access as well to protect data integrity. Users can access the site using this <a href="https://api.ops.stamina4space.upd.edu.ph/admin/">link</a>.
-<img alt="Screenshot of the homepage" src="images/operations-software-admin.png" /></p>
-<p>Upon logging in, the user will see all the accessible modules and data for viewing, adding, editing, and deleting. Access to these data and modules depends on the permissions granted to the user.
-<img alt="Screenshot of admin homepage" src="images/admin-homepage.png" />
-<img alt="Screenshot of admin homepage-2" src="images/admin-homepage-2.png" />
-<img alt="Screenshot of admin homepage-3" src="images/admin-homepage-3.png" /></p>
-<h3 id="adding-user-accounts">Adding user accounts</h3>
-<ol>
-<li>
-<p>Under the <strong>Authentication and Authorization</strong> group, select <strong>Users</strong> or click the <strong>Add</strong> button.
-<img alt="Screenshot of the site administration" src="images/add-users-1.png" />
-<br/><br/>Alternatively, you may also click the <strong>Add User</strong> button from the Users list.
-<img alt="Screenshot of users list" src="images/add-users-2.png" /></p>
-</li>
-<li>
-<p>Add the desired username and password. <strong>Note:</strong> Avoid using common passwords.
-<img alt="Screenshot of add users 1" src="images/add-users-3.png" /></p>
-</li>
-<li>
-<p>Click <strong>Save</strong> button. A message will confirm that the user has been saved and a dialog will open where you can edit user info and permissions.
-<img alt="Screenshot of add users 2" src="images/add-users-4.png" /></p>
-</li>
-</ol>
-<p>You may select individual/multiple permissions for each user.
-<img alt="Screenshot of add users 3" src="images/add-users-5.png" /></p>
-<p><img alt="Screenshot of add users 3" src="images/add-users-6.png" /></p>
 <h2 id="links">Links</h2>
 <ul>
 <li><a href="https://ops.stamina4space.upd.edu.ph/">Operations Software</a></li>

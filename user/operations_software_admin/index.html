@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+
+    
+    <title>Operations Software Admin Guide - GRASPED Software Systems</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../css/base.min.css" rel="stylesheet">
+    <link href="../../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../..">GRASPED Software Systems</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guides <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../data_processing_tools">Data Processing Tools</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../diwata_browser_qgis">Diwata Browser for QGIS</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../operations_software">Operations Software (Users)</a>
+</li>
+
+                        
+                            
+<li >
+    <a href=".">Operations Software (Admins)</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../pr_site">PR Site</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Technical Guides <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../technical/image_browser">Image Browser</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../technical/operations_software">Operations Software</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#diwata-operations-software-admin-guide">Diwata Operations Software Admin Guide</a></li>
+            <li class="second-level"><a href="#users-module">Users Module</a></li>
+                
+                <li class="third-level"><a href="#adding-user-accounts">Adding user accounts</a></li>
+            <li class="second-level"><a href="#missions-management">Missions Management</a></li>
+                
+                <li class="third-level"><a href="#acquisition-missions">Acquisition Missions</a></li>
+                <li class="third-level"><a href="#upload-missions">Upload Missions</a></li>
+                <li class="third-level"><a href="#download-missions">Download Missions</a></li>
+                <li class="third-level"><a href="#acu-log-download-missions">ACU Log Download Missions</a></li>
+                <li class="third-level"><a href="#commands-and-command-batches">Commands and Command Batches</a></li>
+            <li class="second-level"><a href="#data-management">Data Management</a></li>
+                
+            <li class="second-level"><a href="#satellite-health-management">Satellite Health Management</a></li>
+                
+                <li class="third-level"><a href="#acu-logs">ACU Logs</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="diwata-operations-software-admin-guide">Diwata Operations Software Admin Guide</h1>
+<p>This page contains information on the Operations Software's admin page and other tools to manage data stored in the software.</p>
+<p>Users can login directly to the operations software backend to have additional access to the database especially when correcting data that are not editable in the Diwata Operations Software. For security purposes, however, not all users who have access to the Diwata Operations Software can login to the admin site. Some users may have limited access as well to protect data integrity. Users can access the site using this <a href="https://api.ops.stamina4space.upd.edu.ph/admin/">link</a>.
+<img alt="Screenshot of the homepage" src="images/operations-software-admin.png" /></p>
+<p>Upon logging in, the user will see all the accessible modules and data for viewing, adding, editing, and deleting. Access to these data and modules depends on the permissions granted to the user.
+<img alt="Screenshot of admin homepage" src="images/admin-homepage.png" />
+<img alt="Screenshot of admin homepage-2" src="images/admin-homepage-2.png" />
+<img alt="Screenshot of admin homepage-3" src="images/admin-homepage-3.png" /></p>
+<h2 id="users-module">Users Module</h2>
+<h3 id="adding-user-accounts">Adding user accounts</h3>
+<ol>
+<li>
+<p>Under the <strong>Authentication and Authorization</strong> group, select <strong>Users</strong> or click the <strong>Add</strong> button.
+<img alt="Screenshot of the site administration" src="images/add-users-1.png" />
+<br/><br/>Alternatively, you may also click the <strong>Add User</strong> button from the Users list.
+<img alt="Screenshot of users list" src="images/add-users-2.png" /></p>
+</li>
+<li>
+<p>Add the desired username and password. <strong>Note:</strong> Avoid using common passwords.
+<img alt="Screenshot of add users 1" src="images/add-users-3.png" /></p>
+</li>
+<li>
+<p>Click <strong>Save</strong> button. A message will confirm that the user has been saved and a dialog will open where you can edit user info and permissions.
+<img alt="Screenshot of add users 2" src="images/add-users-4.png" /></p>
+</li>
+</ol>
+<p>You may select individual/multiple permissions for each user.
+<img alt="Screenshot of add users 3" src="images/add-users-5.png" /></p>
+<p><img alt="Screenshot of add users 3" src="images/add-users-6.png" /></p>
+<h2 id="missions-management">Missions Management</h2>
+<h3 id="acquisition-missions">Acquisition Missions</h3>
+<h4 id="adding-a-new-acquisition-mission">Adding a new Acquisition Mission</h4>
+<ol>
+<li>
+<p>Login to the admin site with your credentials. You may contact the system administrator if you still don't have an account.</p>
+</li>
+<li>
+<p>Look for the Missions module under the MISSIONS_MANAGEMENT subgroup.
+<img alt="Screenshot of Acquisition Missions" src="images/acquisition-missions.png" /></p>
+</li>
+<li>
+<p>You may click the Missions button to view and update the current records or the Add button if you want to add a new record.
+<img alt="Screenshot of Add Acquisition Missions" src="images/acquisition-missions-2.png" /></p>
+</li>
+<li>
+<p>Add the necessary parameters for the mission, and then click Save. You may also choose Save and add another if you wish to save another record, or Save and continue editing if you don't want to view and edit the recorded data.
+<img alt="Screenshot of Add Acquisition Missions" src="images/add-mission-1.png" /></p>
+</li>
+</ol>
+<p>Some settings are Diwata-2 specific settings so you need to input necessary parameters for the compiler to work properly.</p>
+<p><img alt="Screenshot of Add Acquisition Missions" src="images/add-mission-2.png" /></p>
+<p>Unchecking this box will prevent the command compiler from executing.
+<img alt="Screenshot of Add Acquisition Missions" src="images/add-mission-3.png" /></p>
+<p>Add the payloads to be used.
+<img alt="Screenshot of Add Acquisition Missions" src="images/add-mission-4.png" /></p>
+<p><strong>Note:</strong> As of April 5, 2020, generating commands for Diwata-1 will result in TLE errors because Diwata-1 has already been decommissioned. Command Compiler tries to fetch the latest TLE values from the server and will return an error if the TLE's epoch date is older than 7 days.</p>
+<h4 id="batch-operations-for-acquisition-missions">Batch operations for Acquisition Missions</h4>
+<ol>
+<li>
+<p>Click on the checkbox beside each record to select a record. You may also click the uppermost checkbox to select all the records in the current page.
+<img alt="Screenshot of Batch Acquisition Missions" src="images/acquisition-missions-batch-1.png" /></p>
+</li>
+<li>
+<p>Open the dropdown menu above the table and select the action you want to perform. Then, click Go. 
+<img alt="Screenshot of Batch Acquisition Missions" src="images/acquisition-missions-batch-2.png" /></p>
+</li>
+</ol>
+<p>A prompt will be shown when trying to delete records. Review and confirm that the data can be deleted before proceeding.
+<img alt="Screenshot of Batch Acquisition Missions" src="images/acquisition-missions-batch-3.png" /></p>
+<p><strong>Note:</strong> Please be careful when deleting multiple data. </p>
+<h3 id="upload-missions">Upload Missions</h3>
+<h4 id="adding-a-new-upload-mission">Adding a new Upload Mission</h4>
+<ol>
+<li>
+<p>Login to the admin site with your credentials. You may contact the system administrator if you still don't have an account.</p>
+</li>
+<li>
+<p>Look for the Upload missions module under the MISSIONS_MANAGEMENT subgroup.
+<img alt="Screenshot of Upload Missions" src="images/upload-missions.png" /></p>
+</li>
+<li>
+<p>You may click the Upload missions button to view and update the current records or the Add button if you want to add a new record.
+<img alt="Screenshot of Add Acquisition Missions" src="images/upload-missions-2.png" /></p>
+</li>
+<li>
+<p>Add the necessary parameters for the upload mission, and then click Save. You may also choose Save and add another if you wish to save another record, or Save and continue editing if you don't want to view and edit the recorded data.
+<img alt="Screenshot of Add Acquisition Missions" src="images/upload-missions-3.png" /></p>
+</li>
+</ol>
+<p><strong>Note:</strong> Unchecking Generate commands will prevent the command compiler from executing. This means that the error below will not occur and the record will still be successfully saved but without the generated commands.</p>
+<p><strong>Note:</strong> As of April 5, 2020, generating commands for Diwata-1 will result in TLE errors because Diwata-1 has already been decommissioned. Command Compiler tries to fetch the latest TLE values from the server and will return an error if the TLE's epoch date is older than 7 days.</p>
+<h4 id="batch-operations-for-upload-missions">Batch operations for Upload Missions</h4>
+<ol>
+<li>
+<p>Click on the checkbox beside each record to select a record. You may also click the uppermost checkbox to select all the records in the current page.
+<img alt="Screenshot of Batch Upload Missions" src="images/upload-missions-batch-1.png" /></p>
+</li>
+<li>
+<p>Open the dropdown menu above the table and select the action you want to perform. Then, click Go. 
+<img alt="Screenshot of Batch Upload Missions" src="images/upload-missions-batch-2.png" /></p>
+</li>
+</ol>
+<p>A prompt will be shown when trying to delete records. Review and confirm that the data can be deleted before proceeding.
+<img alt="Screenshot of Batch Upload Missions" src="images/upload-missions-batch-3.png" /></p>
+<p><strong>Note:</strong> Please be careful when deleting multiple data. </p>
+<h3 id="download-missions">Download Missions</h3>
+<h4 id="adding-a-new-download-mission">Adding a new Download Mission</h4>
+<ol>
+<li>
+<p>Login to the admin site with your credentials. You may contact the system administrator if you still don't have an account.</p>
+</li>
+<li>
+<p>Look for the Download Missions module under the MISSIONS_MANAGEMENT subgroup.
+<img alt="Screenshot of Download Missions" src="images/download-missions.png" /></p>
+</li>
+<li>
+<p>You may click the Download Missions button to view and update the current records or the Add button if you want to add a new record.
+<img alt="Screenshot of Add Download Missions" src="images/download-missions-2.png" /></p>
+</li>
+<li>
+<p>Add the necessary parameters for the mission, and then click Save. You may also choose Save and add another if you wish to save another record, or Save and continue editing if you don't want to view and edit the recorded data.
+<img alt="Screenshot of Add Download Missions" src="images/add-download-mission-1.png" /></p>
+</li>
+</ol>
+<p>Some settings are Diwata-2 specific settings so you need to input necessary parameters for the compiler to work properly.</p>
+<p><img alt="Screenshot of Add Download Missions" src="images/add-download-mission-2.png" /></p>
+<p>Unchecking this box will prevent the command compiler from executing.
+<img alt="Screenshot of Add Download Missions" src="images/add-download-mission-3.png" /></p>
+<p>Add the bands, starting addresses, and number of images to be downloaded, respectively.
+<img alt="Screenshot of Add Download Missions" src="images/add-download-mission-4.png" /></p>
+<p><strong>Note:</strong> As of April 5, 2020, generating commands for Diwata-1 will result in TLE errors because Diwata-1 has already been decommissioned. Command Compiler tries to fetch the latest TLE values from the server and will return an error if the TLE's epoch date is older than 7 days.</p>
+<h4 id="batch-operations-for-download-missions">Batch operations for Download Missions</h4>
+<ol>
+<li>
+<p>Click on the checkbox beside each record to select a record. You may also click the uppermost checkbox to select all the records in the current page.
+<img alt="Screenshot of Batch Download Missions" src="images/download-missions-batch-1.png" /></p>
+</li>
+<li>
+<p>Open the dropdown menu above the table and select the action you want to perform. Then, click Go. 
+<img alt="Screenshot of Batch Download Missions" src="images/download-missions-batch-2.png" /></p>
+</li>
+</ol>
+<p>A prompt will be shown when trying to delete records. Review and confirm that the data can be deleted before proceeding.
+<img alt="Screenshot of Batch Download Missions" src="images/download-missions-batch-3.png" /></p>
+<p><strong>Note:</strong> Please be careful when deleting multiple data. </p>
+<p><strong>Note:</strong> As of April 5, 2020, generating commands for Diwata-1 will result in TLE errors because Diwata-1 has already been decommissioned. Command Compiler tries to fetch the latest TLE values from the server and will return an error if the TLE's epoch date is older than 7 days.</p>
+<h3 id="acu-log-download-missions">ACU Log Download Missions</h3>
+<h4 id="adding-a-new-acu-log-download-mission">Adding a new ACU Log Download Mission</h4>
+<ol>
+<li>
+<p>Login to the admin site with your credentials. You may contact the system administrator if you still don't have an account.</p>
+</li>
+<li>
+<p>Look for the ACU Log Download Missions module under the MISSIONS_MANAGEMENT subgroup.
+<img alt="Screenshot of ACU Log Download Missions" src="images/acu-log-download-missions.png" /></p>
+</li>
+<li>
+<p>You may click the ACU Log Download Missions button to view and update the current records or the Add button if you want to add a new record.
+<img alt="Screenshot of Add ACU Log Download Missions" src="images/acu-log-download-missions-2.png" /></p>
+</li>
+<li>
+<p>Add the necessary parameters for the mission, and then click Save. You may also choose Save and add another if you wish to save another record, or Save and continue editing if you don't want to view and edit the recorded data.
+<img alt="Screenshot of Add ACU Log Download Missions" src="images/add-acu-log-download-mission-1.png" /></p>
+</li>
+</ol>
+<p><img alt="Screenshot of Add ACU Log Download Missions" src="images/add-acu-log-download-mission-2.png" /></p>
+<p>Unchecking this box will prevent the command compiler from executing.
+<img alt="Screenshot of Add Download Missions" src="images/add-acu-log-download-mission-3.png" /></p>
+<h4 id="batch-operations-for-acu-log-download-missions">Batch operations for ACU Log Download Missions</h4>
+<ol>
+<li>
+<p>Click on the checkbox beside each record to select a record. You may also click the uppermost checkbox to select all the records in the current page.
+<img alt="Screenshot of Batch ACU Log Download Missions" src="images/acu-log-download-missions-batch-1.png" /></p>
+</li>
+<li>
+<p>Open the dropdown menu above the table and select the action you want to perform. Then, click Go. 
+<img alt="Screenshot of Batch ACU Log Download Missions" src="images/acu-log-download-missions-batch-2.png" /></p>
+</li>
+</ol>
+<p>A prompt will be shown when trying to delete records. Review and confirm that the data can be deleted before proceeding.
+<img alt="Screenshot of Batch ACU Log Download Missions" src="images/acu-log-download-missions-batch-3.png" /></p>
+<p><strong>Note:</strong> Please be careful when deleting multiple data. </p>
+<h3 id="commands-and-command-batches">Commands and Command Batches</h3>
+<p>Commands are generated by default whenever missions are created. The list of commands can be found in the Command module of Missions Management module.
+<img alt="Screenshot of Commands" src="images/commands.png" /></p>
+<h4 id="viewing-and-editing-commands">Viewing and Editing commands</h4>
+<ol>
+<li>
+<p>Upon clicking the <strong>Commands</strong> button, you will see all the generated commands from all the different missions (acquisition, download, etc.). Click on the ID to view/edit the content of a command.
+<img alt="Screenshot of all Commands" src="images/commands-2.png" /></p>
+</li>
+<li>
+<p>Edit the content part of the command and click <strong>Save</strong>.
+<img alt="Screenshot of all commands" src="images/commands-3.png" /></p>
+</li>
+</ol>
+<p><strong>Note:</strong> Commands that are created using the Add command module cannot be linked to an existing mission. To be able to link a mission and a command, create a mission and then find the generated command and edit it. Command compiler will execute everytime <strong>any of the three Save</strong> button is pressed. To prevent the command from being replaced, uncheck the <strong>Create commands</strong> button before saving the mission.
+<img alt="Screenshot of Generated commands from an existing acquisition mission" src="images/mission-commands.png" /></p>
+<h4 id="creating-command-batches">Creating command batches</h4>
+<p>Command batches are a group of commands. It may be a combination of upload, download, acu log download, and acquisition missions. </p>
+<ol>
+<li>To create a batch, go to the <strong>command batches</strong> module or click the <strong>Add</strong> button.</li>
+</ol>
+<p><img alt="Screenshot of Command Batches 1" src="images/command-batches-1.png" /></p>
+<p>If you're already on the list of command batches, you may click the <strong>Add Command batch</strong> on the top right corner of the site.
+<img alt="Screenshot of Command Batches 2" src="images/command-batches-2.png" /></p>
+<ol>
+<li>Add the necessary parameters needed.
+<img alt="Screenshot of Add command batch 1" src="images/add-command-batch-1.png" /></li>
+</ol>
+<p>This part will reflect the generated batch after saving the command batch.
+<img alt="Screenshot of Add command batch 1" src="images/add-command-batch-2.png" /></p>
+<p>Supply the ID of the command that will be added to the batch. To select from the list of commands, you may click the search icon beside the text box.</p>
+<p><img alt="Screenshot of Add command batch 1" src="images/add-command-batch-3.png" /></p>
+<p>A window with the list of commands will popup. Selecting the ID will supply the text box with the command.</p>
+<p><img alt="Screenshot of Add command batch 1" src="images/add-command-batch-4.png" /></p>
+<p>Alternatively, you may input the ID of the command in the text box provided.</p>
+<h2 id="data-management">Data Management</h2>
+<h2 id="satellite-health-management">Satellite Health Management</h2>
+<h3 id="acu-logs">ACU Logs</h3>
+<p>Attitude Control Unit (ACU) log files contain information recorded onboard the satellite describing the state of its positioning and orientation at a given time. The ground station operators download the log files regularly from the satellites and upload them into a cloud service.</p>
+<p>Originally, the contents of the files can be inspected by manually running a depacketer software. This process was tedious and only provided information on-demand.</p>
+<p><img alt="Screenshot of Satellite Health Management" src="images/satellite-health-management-2.png" />
+<br> Highlighted above are the important components of this module.</p>
+<ol>
+<li>
+<p><strong>Raw Log Files</strong> - raw log files are downloaded from the satellite. An automated depacketer runs at a regular interval to depacket new Raw Log Files. Then the raw files and the depacketed data are uploaded to the operations software
+<br>
+<br><img alt="Screenshot of List of Raw Log Files" src="images/raw-log-files.png" />
+<br> <strong>Raw Log Files Batch Operations</strong></p>
+<ul>
+<li>Click on the checkbox beside each record to select a record. You may also click the uppermost checkbox to select all the records in the current page. Open the dropdown menu above the table and select the action you want to perform. Then, click Go. 
+<br><img alt="Screenshot of List of Raw Log Files" src="images/raw-log-files-delete-1.png" /></li>
+<li>
+<p>A prompt will be shown when trying to delete records. Review and confirm that the data can be deleted before proceeding.
+<br><img alt="Screenshot of List of Raw Log Files 2" src="images/raw-log-files-delete-2.png" /></p>
+</li>
+<li>
+<p><strong>Note:</strong> Always be careful when deleting multiple data. </p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>CSV Log Files</strong> - the product of depacketing Raw Log Files. These files can be opened in a spreadsheet application or a script for further processing and analysis.
+The CSV file can be Group1, Group2, or Group3 logs. Each group contains different columns.
+<br><img alt="Screenshot of List of CSV Log Files" src="images/csv-log-files.png" /></p>
+</li>
+<li>
+<p><strong>Note</strong>: Kindly refer to Raw Log Files Batch Operations for the multiple deletion of CSV Log Files.</p>
+</li>
+<li>
+<p><strong>G1-G3 Logs</strong> - each group contains consolidated data of each row of each group. This allows users to query all data of each group within a specific timeframe instead of downloading individual CSV files.</p>
+<ul>
+<li><strong>Group1 Logs</strong>
+<br><img alt="Screenshot of G1 Log" src="images/g1-log.png" /></li>
+<li><strong>Group2 Logs</strong>
+<br><img alt="Screenshot of G2 Logs" src="images/g2-log-1.png" />
+<img alt="Screenshot of G2 Logs 2" src="images/g2-log-2.png" /><img alt="Screenshot of G2 Logs 3" src="images/g2-log-3.png" /><img alt="Screenshot of G2 Logs 4" src="images/g2-log-4.png" /><img alt="Screenshot of G2 Logs 5" src="images/g2-log-5.png" /></li>
+<li><strong>Group3 Logs</strong>
+<br><img alt="Screenshot of G3 Logs" src="images/g3-log-1.png" />
+<img alt="Screenshot of G3 Logs 2" src="images/g3-log-2.png" /><img alt="Screenshot of G3 Logs 3" src="images/g3-log-3.png" /><img alt="Screenshot of G3 Logs 4" src="images/g3-log-4.png" /><img alt="Screenshot of G3 Logs 5" src="images/g3-log-5.png" /></li>
+</ul>
+</li>
+</ol>
+<p><strong>Note:</strong> Files generated in this module are uploaded using an automated pipeline. It is not advisable to edit/delete files/data in this module.</p></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../.."</script>
+    
+    <script src="../../js/base.js"></script>
+    <script src="../../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>
