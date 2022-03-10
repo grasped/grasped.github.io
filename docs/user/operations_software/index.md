@@ -64,35 +64,14 @@ Filter Description
 
 ### Acquisition Missions
 
-#### How to update status of missions?
+![Acquisition Missions](images/missions-table.PNG)
 
-Filter Description
+Basic functions on Acquisition Mission includes, add mission, filter missions, edit commands on the table and perform batch actions.
 
-| Filter Label  | Description             | List of Values                                                                                                     |
-| ------------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Status        | Filter by status        | Pending, Captured, Failed, Cancelled, Downloadable, Processed, Not Processed, Distributed </br> Default value: All |
-| Pointing Mode | Filter by pointing mode | Not Determined, Target Pointing, Off Nadir, Nadir, Rpy, Qt, Off Nadir Rpy, Manual Qt </br> Default value: All      |
-| Satellite     | Filter by satellite     | Diwata-1, Diwata-2, Maya-1 </br> Default value: All                                                                |
-
-#### How to create new entries?
-
-1. On the acquisition mission page, click the `Add Missions` button at the upper right side of filters to redirect to Add Acquisition Missions Page.
-2. Fill out the form.
-3. On the Mission Cameras part at the end of the form, click the `Add Mission Camera` button to create a new form for Camera #1. If you need to add more cameras, click the `Add Mission Camera` button. If you need to remove a camera, click the `Remove` button.
-4. After filling out the form, click `Submit` button.
-5. New mission will be added to the table in Acquisition Missions Page.
-
-#### How to view or update details of a mission?
-
-1. Click the ID of mission to redirect to View Acquisition Mission Page.
-2. After editing, click `Submit` button.
-
-#### How to update status of missions?
-
-1. Choose an action from the dropdown list above the table.
-2. Select mission/s to update by ticking the check box on each row.
-3. If at least one mission is selected, the `Go` button beside the action dropdown list will be clickable, and number of selected missions will be shown beside the Go button.
-4. Click `Go` button to update selected missions.
+1. Click the Add Mission. Add the necessary parameters for the mission, and then click Save. You may also choose Save and add another if you wish to save another record, or Save and continue editing if you don't want to view and edit the recorded data.
+2. Perform filters by selecting values on the drop-downs.
+3. Type a word on search bar to find keywords on the table.
+4. You can perform batch actions when selecting an item on table. You can select multiple. Then select an action from the drop down list. Click Go button to update selected items.
 
 ### Upload Missions
 
