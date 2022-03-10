@@ -16,3 +16,5 @@ nav:
       - Operations Software: technical/operations_software
 markdown_extensions:
   - tables
+  - attr_list
+  - md_in_html
