@@ -48,9 +48,10 @@ Filter Description
 
 1. Click the `Add Target` button at the upper right side of filters to redirect to Add Target Page.
 
-![Add Target Page](images/add-target-page.PNG)
-
-<center>Add Target Page</center>
+<figure markdown>
+   ![Add Target Page](images/add-target-page.PNG)
+   <figcaption>Add Target Page</figcaption>
+</figure>
 
 <br />&nbsp;&nbsp;&nbsp;&nbsp; 2. Input name, select target by drawing polygon on the map, tick/untick is active status, select classification and purpose, and input requred bands.
 <br />&nbsp;&nbsp;&nbsp;&nbsp; 3. Name, classification and purpose are required fields.
