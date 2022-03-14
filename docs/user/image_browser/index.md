@@ -54,6 +54,30 @@ Input the new password and confirm the new password.
 
 You can now use your account with your new password.
 
+### Edit Profile
+
+![Screenshot of the profile settings](images/account-settings.png)
+
+You can edit your profile on `/user/account` url. You can also change your password and personal information except for your email.
+
+### Notifications
+
+You can access all your requested images and subscriptions in the notification page. `/user/notifications`. Click `View` link to show the images on the browser page.
+
+![Screenshot of the notifications page](images/notifications.png)
+
+### History
+
+You can access your past downloads inside the History page. You can re-download these images by click the `Download` button inside the history item.
+
+![Screenshot of the history page](images/history.png)
+
+### Helpdesk
+
+You can submit an inquiry, concern and suggestion using the Helpdesk module.
+
+![Screenshot of the helpdesk page](images/helpdesk.png)
+
 ## Browse Page
 
 The Image Browser can be accessed by any user(with or without account) using this [link](https://data.stamina4space.upd.edu.ph/browse).
