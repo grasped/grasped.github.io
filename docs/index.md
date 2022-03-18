@@ -1,10 +1,18 @@
 # GRASPED Software Systems
 
-The offical technical documentation site for STAMINA4Space - GRASPED Software Systems.
+The offical technical documentation site for STAMINA4Space - GRASPED Software Systems. This guide contains information on using, deploying, and managing various softare systems developed by the STAMINA4Space Program.
 
-* Data Processing Tools
-* Operations Software
-* PR Website
+### User Guides
+These guides contain instructions and information on how to use the software.
+
+* [Data Processing Tools](/user/data_processing_tools)
+* [Diwata Browser for QGIS](/user/diwata_browser_qgis/)
+* [Operations Software](/user/operations_software/) - Guides for regular users of the Operations Software
+* [Operations Software](/user/operations_software/) - Guides for administrators. Find instructions on how to manage accounts and other admin options.
+* [PR Website](/user/pr_site/) - Learn how to add and manage articles for [stamina4space.upd.edu.ph](https://stamina4space.upd.edu.ph/).
+
+### Technical Guides
+These guides contain instructions and information needed to maintain the software.
 
 ## Operations Software
 The Diwata Operations Software (DOS) is an integrated system containing modules for
@@ -12,7 +20,7 @@ managing different components within the satellite operations workflow. The DOS 
 three major modules: Missions Management, Data Management, and Satellite Health
 Management.
 
-In an architectural standpoint, the DOS serves as a central repository of data for multiple software systems developed in GRASPED.
+From an architectural perspective, the DOS serves as a central repository of data for multiple software systems developed in GRASPED.
 
 Check out the [Operations Software User Guide](/user/operations_software) for more info.
 
