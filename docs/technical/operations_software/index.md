@@ -105,7 +105,9 @@ The app will then be available through http://localhost:8001.
 
 ## II. Deployment
 
-The Data Manager API is deployed using Ansible. Configurations for deployment is located under `/vagrant/inventory`.
+The production version of the Operations Software API is deployed on Google Cloud Platform. The deployment is run using Ansible. To be able to run the scripts, you will need to [setup your SSH keys](/technical/gcp/#adding-ssh-keys).
+
+The Operations Software API is deployed using Ansible. Configurations for deployment is located under `/vagrant/inventory`.
 
 ### SSHConfig
 
