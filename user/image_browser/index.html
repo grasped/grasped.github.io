@@ -171,12 +171,12 @@
                 <li class="third-level"><a href="#notifications">Notifications</a></li>
                 <li class="third-level"><a href="#history">History</a></li>
                 <li class="third-level"><a href="#helpdesk">Helpdesk</a></li>
-            <li class="second-level"><a href="#browse-page">Browse Page</a></li>
+            <li class="second-level"><a href="#navigate-browser">Navigate Browser</a></li>
                 
-            <li class="second-level"><a href="#images-on-map-page">Images on Map Page</a></li>
-                
-            <li class="second-level"><a href="#watch-area-page">Watch Area Page</a></li>
-                
+                <li class="third-level"><a href="#filter-image-results">Filter image results</a></li>
+                <li class="third-level"><a href="#view-images-on-map">View images on map</a></li>
+                <li class="third-level"><a href="#request-image-for-an-area">Request image for an area</a></li>
+                <li class="third-level"><a href="#create-watch-area">Create watch area</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
@@ -219,12 +219,72 @@
 <h3 id="helpdesk">Helpdesk</h3>
 <p>You can submit an inquiry, concern and suggestion using the Helpdesk module.</p>
 <p><img alt="Screenshot of the helpdesk page" src="images/helpdesk.png" /></p>
-<h2 id="browse-page">Browse Page</h2>
+<h2 id="navigate-browser">Navigate Browser</h2>
 <p>The Image Browser can be accessed by any user(with or without account) using this <a href="https://data.stamina4space.upd.edu.ph/browse">link</a>.
-<img alt="Screenshot of the Main Page" src="images/main-page.png" /></p>
-<p><img alt="Screenshot of the Image Tile" src="images/image-tile.png" /></p>
-<h2 id="images-on-map-page">Images on Map Page</h2>
-<h2 id="watch-area-page">Watch Area Page</h2></div>
+<img alt="Main Page" src="images/main-page.png" /></p>
+<h3 id="filter-image-results">Filter image results</h3>
+<p><img alt="Filters" src="images/filters.jpg" /></p>
+<p>Image results shown can be customized by:</p>
+<ol>
+<li>Filter using viewport<ul>
+<li>By activating this feature, image results will be recomputed when map is panned or zoomed in/out. The button color will change to black when the feature is activated, and a dotted border will be displayed around the map. To deactivate the feature, click the button. </li>
+</ul>
+</li>
+<li>Using map tools<ul>
+<li>Draw tool<ul>
+<li>Click the button to start drawing. After selecting an area on map, image results will be updated.</li>
+</ul>
+</li>
+<li>Upload vector file<ul>
+<li>Select a shapefile to upload. Accepted file format is <code>.zip</code> only.</li>
+<li>Once file is uploaded, the map will look like this. 
+<img alt="Image Tile" src="images/upload.jpg" /></li>
+<li>Upload ang draw tools will be activated and a polygon will be drawn on map.</li>
+<li>New map button will be shown at top with this format: <code>Filtering using &lt;filename&gt;</code>. Click this to recenter map on drawn polygon.</li>
+<li>To deactivate this filter, click <code>Clear filters</code> button below the upload tool.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Selecting filters<ul>
+<li>Search Bar - Type a location name or coordinates in latitude, longitude</li>
+<li>Basic filters<ul>
+<li>Satellite - Single select of satellite</li>
+<li>Payloads - Single select of payload</li>
+<li>Cloud cover - Use the slider to select range of elevation from 0 - 100 %</li>
+<li>Sun Elevation - Use the slider to select range of elevation from 0 - 180 °</li>
+<li>Wavelength - multiple select of wavelength values in nm</li>
+<li>Date - select date range</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="view-images-on-map">View images on map</h3>
+<p>When you hover on an image from the list, a grey colored polygon is shown on the map so you can have an idea where that image should be on the map. There is no limit on how many can be selected, just click the image to view it on map. All selected images will have a check mark on the upper ride side of the tile.</p>
+<p><img alt="View image on map" src="images/view-image-on-map.jpg" /></p>
+<p>All viewed images are listed on <code>Images on Map</code> tab. Click the tab to see all selected images. From this tab, you can download or remove all, change the order of images, or the opacity of each.</p>
+<p><img alt="Images on Map" src="images/images-on-map.jpg" /></p>
+<p>From the sample selected images, you can see that the 2nd image overlaps the 3rd image on map. You can change the order of the images by dragging the icon (left side of the image), then place it on your preferred order. Changing the order of the 2nd and 3rd images, the map will look like this.</p>
+<p><img alt="Change Order" src="images/change-order.jpg" /></p>
+<h3 id="request-image-for-an-area">Request image for an area</h3>
+<p>If an area you selected has no available image, you may request by clicking the <code>Request Images</code> button. This feature is for registered users only. If you are not yet registered, a <code>Log in</code> button is shown instead of Request Images button.</p>
+<p><img alt="No Result" src="images/no-result.jpg" /></p>
+<p>Once <code>Request Images</code> button is clicked, an image request form will be shown. Basic information and area of interest is initially filled out. You can change the polygon by drawing a new one or upload a shapefile. Basic informaion cannot be changed in this form. 
+Information saved on your account settings will be used in image request form. If you want to change the basic information, go to account settings. After filling out the image request form, click OK to submit.</p>
+<p><img alt="No Result" src="images/image-request-form.jpg" /></p>
+<h3 id="create-watch-area">Create watch area</h3>
+<p>If you want to get notified if there are new images on a specific location, you can use the watch area feature. This feature is for registered users only.</p>
+<!-- You can create a subscription to your desired area by creating a watch area. You will be notified if there are new images from that location. -->
+
+<p>To create a watch area, draw a polygon or upload a shapefile on map. Click the <code>Save</code> button, below the clear filter button, on map. Write a name for the area you want to watch. Click Save to submit.</p>
+<p><img alt="watch Area Form" src="images/watch-area-form.jpg" /></p>
+<p>Your new watch area will be added to the list in <code>Watch Area</code> tab. You may view the area on map or remove the watched area. </p>
+<p><img alt="watch Area Page" src="images/watch-area.jpg" /></p>
+<p>Check the <code>Notifications</code> page if there are new images on your watched areas. If there are notifications, you can download new images or view the images on map.</p>
+<p><img alt="watch Area Notification" src="images/watch-area-notif.jpg" /></p>
+<p>If you click the view link from the notifications, you will be redirected to <code>Images on Map</code> view, showing all the new images on the list and images are added on map.
+<img alt="watch Area Notification" src="images/watch-area-view.jpg" /></p></div>
         
         
     </div>
