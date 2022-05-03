@@ -162,21 +162,21 @@ The default settings are introduced to set a directory, file or variable that ar
 
 #### Level 1
 The Level 1 configuration are settings to Level 1 processes -- Sync, Process, etc. To edit, use the Browse button or paste new configuration and click OK.
-<figure markdown>
+<figure markdown align="center">
    ![Level 1 Configurations](images/221.PNG)
    <figcaption>Configurations for Level 1 Processing</figcaption>
 </figure>
 
 #### Mosaic and Stack
 The Mosaic and Stack configuration are settings to Mosaic and Stack processes -- Sync, Process, etc. To edit, use the Browse button or paste new configuration and click OK.
-<figure markdown>
+<figure markdown align="center">
    ![Mosaic and Stack Configurations](images/222.PNG)
    <figcaption>Configurations for Mosaic and Stack</figcaption>
 </figure>
 
 #### Operations-Software
 The Operations-Software configuration sets the credentials for Operations-Software related upload.
-<figure markdown>
+<figure markdown align="center">
    ![Operations-Software Configurations](images/223.PNG)
    <figcaption>Configurations for Operations-Software</figcaption>
 </figure>
@@ -186,7 +186,7 @@ The following are Level 1 processes in Data Processing Tools GUI.
 
 #### Sync Data
 The following are the steps for Synchronizing data from the S4S Google Drive.
-<figure markdown>
+<figure markdown align="center">
    ![Sync Data](images/231.PNG)
    <figcaption>Level 1 Sync</figcaption>
 </figure>
@@ -209,7 +209,7 @@ The following are the steps for Synchronizing data from the S4S Google Drive.
 
 #### Process
 The following are the steps for Level 1 processing.
-<figure markdown>
+<figure markdown align="center">
    ![Process](images/232.PNG)
    <figcaption>Level 1 Process</figcaption>
 </figure>
@@ -231,7 +231,7 @@ The following are the steps for Level 1 processing.
 
 #### Sort
 The following are steps for sorting Level 1 processed files for distribution.
-<figure markdown>
+<figure markdown align="center">
    ![Sort](images/233.PNG)
    <figcaption>Level 1 Sort</figcaption>
 </figure>
@@ -251,7 +251,7 @@ The following are steps for sorting Level 1 processed files for distribution.
 
 #### Upload
 The following are steps for uploading sorted Level 1 processed files for distribution.
-<figure markdown>
+<figure markdown align="center">
    ![Upload](images/234.PNG)
    <figcaption>Level 1 Upload</figcaption>
 </figure>
@@ -269,7 +269,7 @@ The following are steps for uploading sorted Level 1 processed files for distrib
 
 #### Check Uploads
 The following are the steps for checking successful uploads for Level 1 processed products.
-<figure markdown>
+<figure markdown align="center">
    ![Check Uploads](images/235.PNG)
    <figcaption>Level 1 Check Uploads</figcaption>
 </figure>
@@ -285,7 +285,7 @@ The following are the steps for checking successful uploads for Level 1 processe
 
 #### Push to GDrive
 The following steps are for uploading archive data to S4S Google Drive.
-<figure markdown>
+<figure markdown align="center">
    ![Push to GDrive](images/236.PNG)
    <figcaption>Level 1 Push to GDrive</figcaption>
 </figure>
@@ -306,7 +306,7 @@ The following process for SMI mosaicing and stacking.
 
 #### Sync
 The following are steps for syncing Diwata-2 SMI products to your local machine.
-<figure markdown>
+<figure markdown align="center">
    ![MS Sync](images/241.PNG)
    <figcaption>Mosaic and Stack Sync</figcaption>
 </figure>
@@ -324,7 +324,7 @@ The following are steps for syncing Diwata-2 SMI products to your local machine.
 
 #### Process
 The following processes SMI products to mosaic and stacked images.
-<figure markdown>
+<figure markdown align="center">
    ![MS Process](images/242.PNG)
    <figcaption>Mosaic and Stack Process</figcaption>
 </figure>
@@ -342,7 +342,7 @@ The following processes SMI products to mosaic and stacked images.
 
 #### Upload
 The following are steps to upload SMI Mosaic-ed and Stacked products.
-<figure markdown>
+<figure markdown align="center">
    ![MS Upload](images/243.PNG)
    <figcaption>Mosaic and Stack Upload</figcaption>
 </figure>
