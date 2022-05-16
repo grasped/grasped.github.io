@@ -11,7 +11,7 @@ All write-ups can be found in `docs`. Everything is written in Markdown format.
 
 #### Image with caption
 ```
-<figure markdown>
+<figure markdown align="center">
    ![Add Target Page](images/add-target-page.PNG)
    <figcaption>Add Target Page</figcaption>
 </figure>
