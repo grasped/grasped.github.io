@@ -167,8 +167,15 @@
                 <li class="third-level"><a href="#data-processing-tools-installation">Data Processing Tools Installation</a></li>
             <li class="second-level"><a href="#graphical-user-interface-gui">Graphical User Interface (GUI)</a></li>
                 
+                <li class="third-level"><a href="#start">Start</a></li>
+                <li class="third-level"><a href="#configurations">Configurations</a></li>
+                <li class="third-level"><a href="#level-1_1">Level 1</a></li>
+                <li class="third-level"><a href="#mosaic-and-stack_1">Mosaic and Stack</a></li>
+                <li class="third-level"><a href="#debugging-and-closing-the-gui">Debugging and Closing the GUI</a></li>
             <li class="second-level"><a href="#updating-data-processing-tools">Updating Data Processing Tools</a></li>
                 
+                <li class="third-level"><a href="#basic-update">Basic Update</a></li>
+                <li class="third-level"><a href="#update-the-needs-reinstall">Update The Needs Reinstall</a></li>
             <li class="second-level"><a href="#links">Links</a></li>
                 
     </ul>
@@ -329,8 +336,484 @@ pip install -r requirements.txt
 </li>
 </ol>
 <h2 id="graphical-user-interface-gui">Graphical User Interface (GUI)</h2>
+<h3 id="start">Start</h3>
+<ol>
+<li>
+<p>To start DPT GUI, go to the directory of DPT software. Ex.</p>
+<pre><code>(base) C:\...\GRASPED\data-processing-tools &gt;
+</code></pre>
+</li>
+<li>
+<p>Activate the environment.</p>
+<pre><code>conda activate data-processing-tools
+</code></pre>
+</li>
+<li>
+<p>Launch the GUI.</p>
+<pre><code>python data_processing_tools_gui.py
+</code></pre>
+</li>
+<li>
+<p>The GUI shall appear.</p>
+</li>
+</ol>
+<figure>
+<p><img alt="GUI Start" src="images/21.PNG" />
+   </p>
+<figcaption>DPT GUI</figcaption>
+</figure>
+<h3 id="configurations">Configurations</h3>
+<p>The default settings are introduced to set a directory, file or variable that are recurring in the DPT such as the Mission Planning List. To open the default setting dialog, simply:</p>
+<ol>
+<li>
+<p>Click File on the Menu Bar.</p>
+</li>
+<li>
+<p>Click Configurations.</p>
+</li>
+<li>
+<p>The Configurations dialog box will open.</p>
+</li>
+</ol>
+<h4 id="level-1">Level 1</h4>
+<p>The Level 1 configuration are settings to Level 1 processes -- Sync, Process, etc. To edit, use the Browse button or paste new configuration and click OK.</p>
+<figure align="center">
+<p><img alt="Level 1 Configurations" src="images/221.PNG" />
+   </p>
+<figcaption>Configurations for Level 1 Processing</figcaption>
+</figure>
+<h4 id="mosaic-and-stack">Mosaic and Stack</h4>
+<p>The Mosaic and Stack configuration are settings to Mosaic and Stack processes -- Sync, Process, etc. To edit, use the Browse button or paste new configuration and click OK.</p>
+<figure align="center">
+<p><img alt="Mosaic and Stack Configurations" src="images/222.PNG" />
+   </p>
+<figcaption>Configurations for Mosaic and Stack</figcaption>
+</figure>
+<h4 id="operations-software">Operations-Software</h4>
+<p>The Operations-Software configuration sets the credentials for Operations-Software related upload.</p>
+<figure align="center">
+<p><img alt="Operations-Software Configurations" src="images/223.PNG" />
+   </p>
+<figcaption>Configurations for Operations-Software</figcaption>
+</figure>
+<h3 id="level-1_1">Level 1</h3>
+<p>The following are Level 1 processes in Data Processing Tools GUI.</p>
+<h4 id="sync-data">Sync Data</h4>
+<p>The following are the steps for Synchronizing data from the S4S Google Drive.</p>
+<figure align="center">
+<p><img alt="Sync Data" src="images/231.PNG" />
+   </p>
+<figcaption>Level 1 Sync</figcaption>
+</figure>
+<ol>
+<li>In the Side Panel, click Level 1.</li>
+<li>On the collapsed panel under Level 1, click Sync.</li>
+<li>Fill the fields with locations or click Set Defaults if there are pre-configurations. Check field description from the table below.</li>
+<li>Click Run for Mission Planning List Sync.</li>
+<li>When the process is done for Mission Planning List sync, click Run for GCPs Sync.</li>
+<li>Lastly, click Run for Extracted Images Sync after GCPs sync is done.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Local Mission Planning List</td>
+<td>Directory where the mission planning list needs to be saved.</td>
+</tr>
+<tr>
+<td>GDrive Mission Planning List</td>
+<td>Location of mission planning list in Drive.</td>
+</tr>
+<tr>
+<td>Local GCPs</td>
+<td>Directory where to save GCPs.</td>
+</tr>
+<tr>
+<td>GDrive GCPs</td>
+<td>Location of GCPs in Drive.</td>
+</tr>
+<tr>
+<td>Local Extracted Images</td>
+<td>Directory where extracted images need to be saved.</td>
+</tr>
+<tr>
+<td>GDrive Extracted Images</td>
+<td>Location of extracted images in Drive.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="process">Process</h4>
+<p>The following are the steps for Level 1 processing.</p>
+<figure align="center">
+<p><img alt="Process" src="images/232.PNG" />
+   </p>
+<figcaption>Level 1 Process</figcaption>
+</figure>
+<ol>
+<li>Under Level 1 panel, click on Process.</li>
+<li>Fill the fields with valid directories and click Set Defaults if there are pre-configurations. Check the field descriptions from the table below.</li>
+<li>Click Run.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Satellite</td>
+<td>Selection of which satellite products are to be processed.</td>
+</tr>
+<tr>
+<td>Processing Folder</td>
+<td>Location of where to save the output of the process.</td>
+</tr>
+<tr>
+<td>GCP Folder/s</td>
+<td>Folder/s of GCPs that are needed in the process.</td>
+</tr>
+<tr>
+<td>Mission Planning List</td>
+<td>File path of mission planning list.</td>
+</tr>
+<tr>
+<td>Depacketed Images</td>
+<td>Location of extracted images from Sync.</td>
+</tr>
+<tr>
+<td>QA Folder</td>
+<td>Location where to save output for QA.</td>
+</tr>
+<tr>
+<td>Processing Level</td>
+<td>Selection of extent of process.</td>
+</tr>
+<tr>
+<td>Ignore Errors</td>
+<td>Checkbox to ignore errors during processing.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sort">Sort</h4>
+<p>The following are steps for sorting Level 1 processed files for distribution.</p>
+<figure align="center">
+<p><img alt="Sort" src="images/233.PNG" />
+   </p>
+<figcaption>Level 1 Sort</figcaption>
+</figure>
+<ol>
+<li>Under Level 1 panel, click on Sort.</li>
+<li>Fill the fields with valid directories and click Set Defaults if there are pre-configurations.</li>
+<li>Click Run.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Satellite</td>
+<td>Selection of which satellite products are to be processed.</td>
+</tr>
+<tr>
+<td>Processing Folder</td>
+<td>Location of where to save the output of the process.</td>
+</tr>
+<tr>
+<td>GCP Folder/s</td>
+<td>Folder/s of GCPs that are needed in the process.</td>
+</tr>
+<tr>
+<td>Mission Planning List</td>
+<td>File path of mission planning list.</td>
+</tr>
+<tr>
+<td>Distribution Folder</td>
+<td>Directory where to save sorted captures.</td>
+</tr>
+<tr>
+<td>Archive Folder</td>
+<td>Directory where to save sorted archives for archiving.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="upload">Upload</h4>
+<p>The following are steps for uploading sorted Level 1 processed files for distribution.</p>
+<figure align="center">
+<p><img alt="Upload" src="images/234.PNG" />
+   </p>
+<figcaption>Level 1 Upload</figcaption>
+</figure>
+<ol>
+<li>Under Level 1 panel, click on Upload.</li>
+<li>Fill the fields with valid directories and click Set Defaults if there are pre-configurations.</li>
+<li>Click Run.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source</td>
+<td>Directory of sorted captures from the Sort process.</td>
+</tr>
+<tr>
+<td>Skip Files</td>
+<td>Checkbox to ignore compression of captures.</td>
+</tr>
+<tr>
+<td>Dry Run</td>
+<td>Checkbox to check if there are available files to upload.</td>
+</tr>
+<tr>
+<td>Files/No Files</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="check-uploads">Check Uploads</h4>
+<p>The following are the steps for checking successful uploads for Level 1 processed products.</p>
+<figure align="center">
+<p><img alt="Check Uploads" src="images/235.PNG" />
+   </p>
+<figcaption>Level 1 Check Uploads</figcaption>
+</figure>
+<ol>
+<li>Under Level 1 panel, click on Check Uploads.</li>
+<li>Select a Distribution folder where processed Level 1 products are located. This is the same folder used to upload these products.</li>
+<li>Click Run.</li>
+<li>The result will show each capture and their uploaded state -- True or False.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source</td>
+<td>Directory of sorted captures from the Sort process.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="push-to-gdrive">Push to GDrive</h4>
+<p>The following steps are for uploading archive data to S4S Google Drive.</p>
+<figure align="center">
+<p><img alt="Push to GDrive" src="images/236.PNG" />
+   </p>
+<figcaption>Level 1 Push to GDrive</figcaption>
+</figure>
+<ol>
+<li>Under Level 1, click on Push to GDrive.</li>
+<li>Fill the fields with correct paths or click Set Defaults if pre-configurations are present.</li>
+<li>Click Run.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Local Archive Path</td>
+<td>Location of archive captures.</td>
+</tr>
+<tr>
+<td>GDrive Archive Path</td>
+<td>Location where to save archive captures in S4S Google Drive.</td>
+</tr>
+<tr>
+<td>Drive-Shared-With-Me</td>
+<td>Checkbox if the Drive location is not owned or not.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mosaic-and-stack_1">Mosaic and Stack</h3>
+<p>The following process for SMI mosaicing and stacking.</p>
+<h4 id="sync">Sync</h4>
+<p>The following are steps for syncing Diwata-2 SMI products to your local machine.</p>
+<figure align="center">
+<p><img alt="MS Sync" src="images/241.PNG" />
+   </p>
+<figcaption>Mosaic and Stack Sync</figcaption>
+</figure>
+<ol>
+<li>In the side panel, click Mosaic and Stack.</li>
+<li>Under the collapsed panel Mosaic and Stack, click on Sync.</li>
+<li>Fill the fields with correct paths or click Set Defaults if pre-configurations are present.</li>
+<li>Click Run.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Local Group Catures</td>
+<td>Location where to save group captures.</td>
+</tr>
+<tr>
+<td>GDrive Group Captures</td>
+<td>Location where to save archive captures in S4S Google Drive.</td>
+</tr>
+<tr>
+<td>Drive-Shared-With-Me</td>
+<td>Checkbox if the Drive location is not owned or not.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="process_1">Process</h4>
+<p>The following processes SMI products to mosaic and stacked images.</p>
+<figure align="center">
+<p><img alt="MS Process" src="images/242.PNG" />
+   </p>
+<figcaption>Mosaic and Stack Process</figcaption>
+</figure>
+<ol>
+<li>Under the Mosaic and Stack side panel, click on Process.</li>
+<li>Fill the fields with correct paths or click Set Defaults if pre-configurations are present.</li>
+<li>Click Run.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Satellite</td>
+<td>Selection of which satellite the group captures is to be processed.</td>
+</tr>
+<tr>
+<td>Parent Folder</td>
+<td>Location of capture groups in the computer.</td>
+</tr>
+<tr>
+<td>Capture Groups</td>
+<td>Folder/s of individual capture groups.</td>
+</tr>
+<tr>
+<td>Drive-Shared-With-Me</td>
+<td>Checkbox if the Drive location is not owned or not.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="upload_1">Upload</h4>
+<p>The following are steps to upload SMI Mosaic-ed and Stacked products.</p>
+<figure align="center">
+<p><img alt="MS Upload" src="images/243.PNG" />
+   </p>
+<figcaption>Mosaic and Stack Upload</figcaption>
+</figure>
+<ol>
+<li>Under the Mosaic and Stack side panel, click on Upload.</li>
+<li>Select a parent folder or folder where mosaic and stack process results are found. This is the same as the output folder from the Mosaic and Stack Process step.</li>
+<li>Check Publish if these products are checked and should be seen for the public and leave uncheck if data needs more checking or confidentiality.</li>
+<li>Check the Compute MD5 to incorporate unique file IDs to each product.</li>
+<li>Check the Check Duplicates to ignore similar files based on their MD5 sum.</li>
+<li>Click Run.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source</td>
+<td>Location of processed capture groups or the mosaic and stacked outputs.</td>
+</tr>
+<tr>
+<td>Publish</td>
+<td>Checkbox to set the upload as published. Check only if no further confidentiality assurance is needed.</td>
+</tr>
+<tr>
+<td>Compute-MD5</td>
+<td>Checkbox to compute a unique identifier of the file. This is to check if a reupload is the same file as before.</td>
+</tr>
+<tr>
+<td>Check Duplicates</td>
+<td>Checkbox to test if the capture group is already uploaded with the same MD5.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="debugging-and-closing-the-gui">Debugging and Closing the GUI</h3>
+<p>For now, close the application using the close button if the following are encountered:
+1. If the application crashed.
+2. An error occurred in the Anaconda Prompt.
+3. If the progress bar does not move.</p>
 <h2 id="updating-data-processing-tools">Updating Data Processing Tools</h2>
 <p>There can be new features that require new dependencies. In this case, the software needs to be updated and reinstalled. Follow these steps to update and reinstall DPT. Refer to the Software Systems team for new features.</p>
+<h3 id="basic-update">Basic Update</h3>
+<ol>
+<li>Backup the config file inside the DPT software folder.</li>
+<li>
+<p>Open Anaconda Prompt, go to the DPT directory.</p>
+<pre><code>(base) C:\...\data-processing-tools &gt;
+</code></pre>
+</li>
+<li>
+<p>Activate the environment.</p>
+<pre><code>conda activate data-processing-tools
+</code></pre>
+</li>
+<li>
+<p>Pull the updated repository.</p>
+<pre><code>git pull
+</code></pre>
+</li>
+</ol>
+<h3 id="update-the-needs-reinstall">Update The Needs Reinstall</h3>
+<ol>
+<li>
+<p>Go to the directory of DPT software.</p>
+<pre><code>(data-processing-tools) C:\...\data-processing-tools &gt;
+</code></pre>
+</li>
+<li>
+<p>If the environment is activated, deactivate it.</p>
+<pre><code>conda deactivate
+</code></pre>
+</li>
+<li>
+<p>Delete the environment.</p>
+<pre><code>conda remove --name data-processing-tools --all
+</code></pre>
+</li>
+<li>
+<p>Get the updates from the repository.</p>
+<pre><code>git pull
+</code></pre>
+</li>
+<li>
+<p><a href="#data-processing-tools-installation">Section 1.3</a> will be updated whenever there are new dependencies for DPT. Follow that section to reinstall DPT depending on your operating system. Start with line 4 for Windows and line 4 for Debian.</p>
+</li>
+</ol>
 <h2 id="links">Links</h2>
 <ul>
 <li><a href="https://gitlab.com/grasped/data-processing-tools/">Data Processing Tools on Gitlab</a></li>
