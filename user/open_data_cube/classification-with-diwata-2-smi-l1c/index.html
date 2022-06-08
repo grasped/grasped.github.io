@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+    
+    <title>Performing a classification using Diwata-2 data - GRASPED Software Systems</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../../css/base.min.css" rel="stylesheet">
+    <link href="../../../css/cinder.min.css" rel="stylesheet">
+    <link href="../../../css/grasped.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../../..">GRASPED Software Systems</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guides <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../data_processing_tools">Data Processing Tools</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../diwata_browser_qgis">Diwata Browser for QGIS</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../operations_software">Operations Software (Users)</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../operations_software_admin">Operations Software (Admins)</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../pr_site">PR Site</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../image_browser">Image Browser</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="..">OpenDataCube</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Technical Guides <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../technical/image_browser">Image Browser</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../technical/operations_software">Operations Software</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../technical/open_data_cube">OpenDataCube</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../technical/diwata_browser_qgis">Diwata Browser for QGIS</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#performing-a-classification-using-diwata-2-data">Performing a classification using Diwata-2 data</a></li>
+            <li class="second-level"><a href="#description">Description</a></li>
+                
+            <li class="second-level"><a href="#background">Background</a></li>
+                
+            <li class="second-level"><a href="#example-2-benguet-fire-extent-using-svm">Example 2. Benguet Fire Extent using SVM</a></li>
+                
+                <li class="third-level"><a href="#choose-a-study-area">Choose a study area</a></li>
+                <li class="third-level"><a href="#display-study-area">Display study area</a></li>
+                <li class="third-level"><a href="#extract-training-data-using-a-shapefile">Extract training data using a shapefile</a></li>
+                <li class="third-level"><a href="#examining-the-training-set">Examining the training set</a></li>
+                <li class="third-level"><a href="#links">Links</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="performing-a-classification-using-diwata-2-data">Performing a classification using Diwata-2 data</h1>
+<h4 id="description">Description</h4>
+<p>This notebook demonstrates different analysis that can be performed in the Open Data Cube using the Diwata-2 SMI dataset.</p>
+<h4 id="background">Background</h4>
+<p>Diwata-2 has been able to capture 84% (as of October 30, 2021) of the land cover of the Philippines. Using these images and the previous guides, we can perform an analysis to understand some phenomena on Eath's surface. We can begin with some question.</p>
+<h2 id="example-2-benguet-fire-extent-using-svm">Example 2. Benguet Fire Extent using SVM</h2>
+<h3 id="choose-a-study-area">Choose a study area</h3>
+<pre><code>lat = (16.1899, 16.8523)
+lon = (120.3772, 121.1886)
+</code></pre>
+<h3 id="display-study-area">Display study area</h3>
+<pre><code>from ph_odc_tools import display_map
+
+display_map(x=lon, y=lat)
+</code></pre>
+<h3 id="extract-training-data-using-a-shapefile">Extract training data using a shapefile</h3>
+<p>For any classification analysis using Earth observation images, a training data is required. Training data are selected features from the images depending on the analysis. A shapefile is used to select the properties or values from each band of a feature. The code below reads and display a shapefile.</p>
+<pre><code>import geopandas as gpd
+
+shp_file = &quot;data/benguet_training_data/benguet_training_data.shp&quot;
+gdf = gpd.read_file(shp_file)
+</code></pre>
+<h3 id="examining-the-training-set">Examining the training set</h3>
+<pre><code>gdf.head()
+</code></pre>
+<pre><code>gdf[~gdf['Class_name'].isnull()]
+</code></pre>
+<pre><code>gdf.explore()
+</code></pre>
+<pre><code>import numpy as np
+
+gdf = gdf.astype({&quot;Class&quot;: np.int})
+gdf.Class.dtype
+</code></pre>
+<pre><code>
+import datacube
+from dea_tools.classification import collect_training_data, predict_xr
+
+query = {
+    'time': '2020-02-29',
+    'resolution': (-122, 122),
+    'output_crs': 'EPSG:32651',
+}
+
+field = 'Class'
+zonal_stats = 'median'
+ncpus = 1
+
+def custom_function(query):
+    dc = datacube.Datacube(app=&quot;benguet_fire_extent&quot;)
+    ds = dc.load(product=&quot;diwata2_smi_l1c&quot;, **query)
+    ds = ds.where(ds &gt; 0)
+
+    return ds
+
+
+
+
+column_names, model_input = collect_training_data(
+                                    gdf=gdf,
+                                    dc_query=query,
+                                    ncpus=ncpus,
+                                    feature_func=custom_function,
+                                    field=field,
+                                    zonal_stats=zonal_stats
+                                    )
+</code></pre>
+<pre><code>model_input[:, 0] = np.where(model_input[:, 0] == 18, 1, 0)
+model_input[:, 0]
+</code></pre>
+<pre><code>from sklearn import model_selection
+
+# Split into training and testing data
+model_train, model_test = model_selection.train_test_split(model_input,
+                                                           stratify=model_input[:, 0],
+                                                           train_size=0.8,
+                                                           random_state=0)
+print(&quot;Train shape:&quot;, model_train.shape)
+print(&quot;Test shape:&quot;, model_test.shape)
+</code></pre>
+<pre><code># Select the variables we want to use to train our model
+model_variables = column_names[1:]
+
+# Extract relevant indices from the processed shapefile
+model_col_indices = [column_names.index(var_name) for var_name in model_variables]
+model_col_indices
+</code></pre>
+<pre><code>from sklearn import tree
+
+# Initialise model
+model = tree.DecisionTreeClassifier(max_depth=10)
+</code></pre>
+<pre><code># Train model
+model.fit(model_train[:, model_col_indices], model_train[:, 0])
+</code></pre>
+<pre><code>import matplotlib.pyplot as plt
+
+# This shows the feature importance of the input features for predicting the class labels provided
+plt.bar(x=model_variables, height=model.feature_importances_)
+plt.gca().set_ylabel('Importance', labelpad=10)
+plt.gca().set_xlabel('Variable', labelpad=10);
+</code></pre>
+<pre><code>from io import StringIO
+import pydotplus
+from IPython.display import Image
+
+# Prepare a dictionary of class names
+class_names = {1: 'Burn',
+               0: 'Else'}
+
+# Get list of unique classes in model
+class_codes = np.unique(model_train[:, 0])
+class_names_in_model = [class_names[k] for k in class_codes]
+
+# Plot decision tree
+dot_data = StringIO()
+tree.export_graphviz(model,
+                     out_file=dot_data,
+                     feature_names=model_variables,
+                     class_names=class_names_in_model,
+                     filled=True,
+                     rounded=True,
+                     special_characters=True)
+
+graph = pydotplus.graph_from_dot_data(dot_data.getvalue())
+Image(graph.create_png())
+</code></pre>
+<p><img alt="Classification Tree" src="../images/classification-tree.png" /></p>
+<pre><code>from sklearn.metrics import accuracy_score
+
+predictions = model.predict(model_test[:, model_col_indices])
+accuracy_score(predictions, model_test[:, 0])
+</code></pre>
+<pre><code># Get extent from input shapefile
+xmin, ymin, xmax, ymax = gdf.unary_union.bounds
+
+# Set up the query parameters
+pred_query = {
+    'time': '2020-02-29',
+    'x': (xmin, xmax),
+    'y': (ymin, ymax),
+    'output_crs': 'EPSG:32651',
+    'resolution': (-122, 122),
+}
+
+# Use custom function to generate input data
+input_data = custom_function(pred_query)
+</code></pre>
+<pre><code># Predict landcover using the trained model
+predicted = predict_xr(model,
+                       input_data,
+                       clean=True
+                      )
+</code></pre>
+<pre><code>import matplotlib.pyplot as plt
+
+# Set up plot
+fig, axes = plt.subplots(1, 2, figsize=(14, 6))
+predicted.Predictions.plot(ax=axes[0],
+               cmap='Reds',
+               add_labels=False,
+               add_colorbar=False)
+
+# Plot true colour image
+(input_data[['band4', 'band2', 'band1']]
+ .squeeze('time')
+ .to_array()
+ .plot.imshow(ax=axes[1], robust=True, add_labels=False))
+
+# Remove axis on right plot
+axes[1].get_yaxis().set_visible(False)
+
+# Add plot titles
+axes[0].set_title('Classified data')
+axes[1].set_title('True colour image');
+</code></pre>
+<p><img alt="NDVI" src="../images/classification-result.png" /></p>
+<h3 id="links">Links</h3>
+<p><a href="../">Go back to OpenDataCube User Guide</a></p></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../../.."</script>
+    
+    <script src="../../../js/base.js"></script>
+    <script src="../../../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>

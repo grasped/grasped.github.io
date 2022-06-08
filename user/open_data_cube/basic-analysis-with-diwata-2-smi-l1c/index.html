@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+    
+    <title>Performing a basic analysis using Diwata-2 data - GRASPED Software Systems</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../../css/base.min.css" rel="stylesheet">
+    <link href="../../../css/cinder.min.css" rel="stylesheet">
+    <link href="../../../css/grasped.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../../..">GRASPED Software Systems</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guides <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../data_processing_tools">Data Processing Tools</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../diwata_browser_qgis">Diwata Browser for QGIS</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../operations_software">Operations Software (Users)</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../operations_software_admin">Operations Software (Admins)</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../pr_site">PR Site</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../image_browser">Image Browser</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="..">OpenDataCube</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Technical Guides <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../technical/image_browser">Image Browser</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../technical/operations_software">Operations Software</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../technical/open_data_cube">OpenDataCube</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../technical/diwata_browser_qgis">Diwata Browser for QGIS</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#performing-a-basic-analysis-using-diwata-2-data">Performing a basic analysis using Diwata-2 data</a></li>
+            <li class="second-level"><a href="#description">Description</a></li>
+                
+            <li class="second-level"><a href="#background">Background</a></li>
+                
+            <li class="second-level"><a href="#example-1-ndvi">Example 1. NDVI</a></li>
+                
+                <li class="third-level"><a href="#choose-a-study-area">Choose a study area</a></li>
+                <li class="third-level"><a href="#display-study-area">Display study area</a></li>
+                <li class="third-level"><a href="#loading-data">Loading data</a></li>
+                <li class="third-level"><a href="#remove-0-value-data">Remove 0 value data</a></li>
+                <li class="third-level"><a href="#plotting-the-rgb">Plotting the RGB</a></li>
+                <li class="third-level"><a href="#plot-false-composite-color">Plot false composite color</a></li>
+                <li class="third-level"><a href="#perform-analysis">Perform analysis</a></li>
+                <li class="third-level"><a href="#links">Links</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="performing-a-basic-analysis-using-diwata-2-data">Performing a basic analysis using Diwata-2 data</h1>
+<h4 id="description">Description</h4>
+<p>This notebook demonstrates different analysis that can be performed in the Open Data Cube using the Diwata-2 SMI dataset.</p>
+<h4 id="background">Background</h4>
+<p>Diwata-2 has been able to capture 84% (as of October 30, 2021) of the land cover of the Philippines. Using these images and the previous guides, we can perform an analysis to understand some phenomena on Eath's surface. We can begin with some question.</p>
+<p>The examples here are simple and without much context. The following are example questions.</p>
+<ol>
+<li>Which part of a given area have healthy vegetation? How is the health of vegetation changing over time?</li>
+<li>What is the extent of ash fall after the 2020 Taal volcano explosion?</li>
+</ol>
+<h2 id="example-1-ndvi">Example 1. NDVI</h2>
+<h3 id="choose-a-study-area">Choose a study area</h3>
+<p>It is important to load as much data as needed only to load data faster and avoid the notebook from crashing due to deficient memory. One way is to limit the study area by setting a coordinate pair and adding a buffer. You can use <a href="https://www.google.com/maps">Google Maps</a> to know a coordinate pair of a location. Another way is knowing the bouding box of the study area. You can use the <a href="http://bboxfinder.com/">bboxfinder</a> tool to do this.</p>
+<pre><code>lat = (15.9613, 18.7867)
+lon = (119.6246, 121.0693)
+</code></pre>
+<h3 id="display-study-area">Display study area</h3>
+<pre><code>from ph_odc_tools import display_map
+
+display_map(x=lon, y=lat)
+</code></pre>
+<h3 id="loading-data">Loading data</h3>
+<pre><code>import datacube
+
+dc = datacube.Datacube(app=&quot;my_analysis&quot;)
+ds = dc.load(product=&quot;diwata2_smi_l1c&quot;,
+             x=lon,
+             y =lat,
+             time=(&quot;2019-01-01&quot;, &quot;2019-12-31&quot;),
+             output_crs='EPSG:32651',
+             resolution=(-122, 122)
+            )
+
+ds
+</code></pre>
+<h3 id="remove-0-value-data">Remove 0 value data</h3>
+<pre><code>ds1 = ds.where(ds &gt; 0)
+</code></pre>
+<h3 id="plotting-the-rgb">Plotting the RGB</h3>
+<pre><code>import numpy as np
+import matplotlib.pyplot as plt
+
+rgb = np.dstack((ds1.band4.isel(time=3).values,
+                 ds1.band2.isel(time=3).values,
+                 ds1.band1.isel(time=3).values))
+
+plt.figure(figsize = (20,10))
+plt.imshow(rgb)
+</code></pre>
+<p><img alt="RGB image" src="../images/basic_1.png" /></p>
+<h3 id="plot-false-composite-color">Plot false composite color</h3>
+<pre><code>false_composite = np.dstack((ds1.band8.isel(time=3).values,
+                 ds1.band4.isel(time=3).values,
+                 ds1.band2.isel(time=3).values))
+
+plt.figure(figsize = (20,10))
+plt.imshow(false_composite)
+</code></pre>
+<p><img alt="False composite image" src="../images/basic-false-composite.png" /></p>
+<h3 id="perform-analysis">Perform analysis</h3>
+<pre><code>ndvi = (ds1.band6 - ds1.band3) / (ds1.band6 + ds1.band3)
+plt.figure(figsize = (20,10))
+plt.imshow(ndvi.isel(time=3).values, cmap=&quot;RdYlBu&quot;)
+plt.clim(-0.054,0.84)
+plt.colorbar()
+plt.show()
+</code></pre>
+<p><img alt="NDVI" src="../images/basic-ndvi.png" /></p>
+<h3 id="links">Links</h3>
+<p><a href="../">Go back to OpenDataCube User Guide</a></p></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../../.."</script>
+    
+    <script src="../../../js/base.js"></script>
+    <script src="../../../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>

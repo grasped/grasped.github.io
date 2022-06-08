@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+
+    
+    <title>Open Data Cube Technical Guide - GRASPED Software Systems</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../css/base.min.css" rel="stylesheet">
+    <link href="../../css/cinder.min.css" rel="stylesheet">
+    <link href="../../css/grasped.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../..">GRASPED Software Systems</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guides <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../user/data_processing_tools">Data Processing Tools</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../user/diwata_browser_qgis">Diwata Browser for QGIS</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../user/operations_software">Operations Software (Users)</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../user/operations_software_admin">Operations Software (Admins)</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../user/pr_site">PR Site</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../user/image_browser">Image Browser</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../user/open_data_cube">OpenDataCube</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Technical Guides <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../image_browser">Image Browser</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../operations_software">Operations Software</a>
+</li>
+
+                        
+                            
+<li >
+    <a href=".">OpenDataCube</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../diwata_browser_qgis">Diwata Browser for QGIS</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#open-data-cube-technical-guide">Open Data Cube Technical Guide</a></li>
+            <li class="second-level"><a href="#i-development">I. Development</a></li>
+                
+                <li class="third-level"><a href="#install-dependencies">Install Dependencies</a></li>
+                <li class="third-level"><a href="#clone-odc-development-repository">Clone ODC development repository</a></li>
+                <li class="third-level"><a href="#install-python-and-packages-in-anaconda-environment">Install Python and packages in Anaconda environment</a></li>
+            <li class="second-level"><a href="#create-database">Create database</a></li>
+                
+                <li class="third-level"><a href="#prepare-indexing-tools">Prepare indexing tools</a></li>
+                <li class="third-level"><a href="#add-the-product-definition">Add the product definition</a></li>
+                <li class="third-level"><a href="#add-dataset-definition">Add dataset definition</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="open-data-cube-technical-guide">Open Data Cube Technical Guide</h1>
+<h2 id="i-development">I. Development</h2>
+<p>This guide presents the process for installing Open Data Cube (ODC) into a local machine and the proper indexing of DIWATA-2 SMI dataset.</p>
+<p>The following has been developed and tested in Windows 10 and Debian systems.</p>
+<h3 id="install-dependencies">Install Dependencies</h3>
+<p>The following software are required to run ODC.</p>
+<ol>
+<li><a href="https://www.anaconda.com/products/individual">Anaconda</a></li>
+<li><a href="https://www.postgresql.org/download/">PostgreSQL</a></li>
+<li><a href="https://docs.aws.amazon.com/cli/v1/userguide/install-windows.html">AWS CLI</a></li>
+<li><a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html">Configure AWS CLI</a></li>
+</ol>
+<h3 id="clone-odc-development-repository">Clone ODC development repository</h3>
+<p>Clone the development reposity where document definitions and user guides are found.</p>
+<pre><code>git clone https://github.com/grasped/odc.git
+</code></pre>
+<p>Enter the directory.</p>
+<pre><code>cd odc
+</code></pre>
+<h3 id="install-python-and-packages-in-anaconda-environment">Install Python and packages in Anaconda environment</h3>
+<p>Use a conda environment to isolate ODC from other software projects.</p>
+<p>Add conda-forge to package channels.</p>
+<pre><code>conda config --append channels conda-forge
+</code></pre>
+<p>Create a conda environment named <code>odc_env</code> and install python.</p>
+<pre><code>conda create --name odc_env python=3.8 datacube
+</code></pre>
+<p>Activate the <code>odc_env</code> conda environment.</p>
+<pre><code>conda activate odc_env
+</code></pre>
+<p>Install other packages needed by ODC.</p>
+<pre><code>conda install jupyter matplotlib scipy ipyleaflet geopandas scikit-learn-intelex
+</code></pre>
+<h2 id="create-database">Create database</h2>
+<p>If PostgreSQL is fresh installation, a <code>user</code> needs to be setup.</p>
+<p>Once a user is present e.g. <code>postgres</code>, a database should be created after the user.</p>
+<pre><code>createdb -h localhost -U postgres datacube
+
+password: ******
+</code></pre>
+<p>The next step is creating an integration configuration. The following text can be copied and saved to the directory <code>C:\Users\odc_user\.datacube_integration.conf</code> (example):</p>
+<pre><code>[datacube]
+db_hostname: localhost
+db_database: datacube
+db_username: postgres
+db_password: ******
+</code></pre>
+<p>Finally, initialize the database.</p>
+<pre><code>datacube -v system init
+</code></pre>
+<h3 id="prepare-indexing-tools">Prepare indexing tools</h3>
+<p>If the data source is coming from AWS S3, some tools are needed to index the data. Starting with <code>boto</code> and <code>awscli</code>. Install them using:</p>
+<pre><code>conda install aiobotocore[boto3,awscli]
+</code></pre>
+<p>or (if pip)</p>
+<pre><code>pip install aiobotocore[boto3,awscli]
+</code></pre>
+<p>The next package is the ODC tools itself:</p>
+<pre><code>pip install odc-apps-dc-tools
+</code></pre>
+<h3 id="add-the-product-definition">Add the product definition</h3>
+<p>The DIWATA-2 SMI dataset product definition can be added using the following. This document describes the dataset which includes projection and measurement properties of the SMI products.</p>
+<pre><code>datacube product add s3://diwata-missions/Diwata-2/SMI/collection/diwata_2_smi.yaml
+</code></pre>
+<p>or</p>
+<pre><code>datacube product add https://diwata2-odc.s3.us-east-2.amazonaws.com/eo3-product/diwata2_smi_l1c.odc-product.yaml
+</code></pre>
+<h3 id="add-dataset-definition">Add dataset definition</h3>
+<p>Finally, the dataset documents are metadata for each data. Each one describes the capture time and location of individual band files. They can be recursively added using the following.</p>
+<pre><code>s3-to-dc --no-sign-request s3://diwata-missions/Diwata-2/SMI/collection/*.odc-metadata.yaml diwata_2_smi
+</code></pre>
+<p>or</p>
+<pre><code>s3-to-dc --no-sign-request https://diwata2-odc.s3.us-east-2.amazonaws.com/eo3/*.odc-metadata.yaml diwata2_smi_l1c
+
+s3-to-dc --no-sign-request s3://diwata2-odc/eo3/*.odc-metadata.yaml diwata2_smi_l1c
+</code></pre></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../.."</script>
+    
+    <script src="../../js/base.js"></script>
+    <script src="../../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>
